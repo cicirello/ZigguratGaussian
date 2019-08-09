@@ -1,4 +1,6 @@
-# ZigguratGaussian: Java implementation of the Ziggurat algorithm for generating Gaussian distributed random numbers
+# ZigguratGaussian
+
+## Java implementation of the Ziggurat algorithm for generating Gaussian distributed random numbers
 
 Copyright (C) 2015, 2017-2019 Vincent A. Cicirello.
 
