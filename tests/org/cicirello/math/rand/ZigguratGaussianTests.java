@@ -52,7 +52,7 @@ public class ZigguratGaussianTests {
 		for (int k = 0; k < chiVals.length; k++) {
 			buckets = new int[4];
 			for (int i = 0; i < N; i++) {
-				int j = whichPercentile(ZigguratGaussian.nextGaussian(r));
+				int j = whichBucket(ZigguratGaussian.nextGaussian(r));
 				buckets[j]++;
 			}
 			chiVals[k] = chiSquare(buckets);
@@ -76,7 +76,7 @@ public class ZigguratGaussianTests {
 		for (int k = 0; k < chiVals.length; k++) {
 			buckets = new int[4];
 			for (int i = 0; i < N; i++) {
-				int j = whichPercentile(ZigguratGaussian.nextGaussian(10, r), 10);
+				int j = whichBucket(ZigguratGaussian.nextGaussian(10, r), 10);
 				buckets[j]++;
 			}
 			chiVals[k] = chiSquare(buckets);
@@ -100,7 +100,7 @@ public class ZigguratGaussianTests {
 		for (int k = 0; k < chiVals.length; k++) {
 			buckets = new int[4];
 			for (int i = 0; i < N; i++) {
-				int j = whichPercentile(ZigguratGaussian.nextGaussian(r));
+				int j = whichBucket(ZigguratGaussian.nextGaussian(r));
 				buckets[j]++;
 			}
 			chiVals[k] = chiSquare(buckets);
@@ -124,7 +124,7 @@ public class ZigguratGaussianTests {
 		for (int k = 0; k < chiVals.length; k++) {
 			buckets = new int[4];
 			for (int i = 0; i < N; i++) {
-				int j = whichPercentile(ZigguratGaussian.nextGaussian(10, r), 10);
+				int j = whichBucket(ZigguratGaussian.nextGaussian(10, r), 10);
 				buckets[j]++;
 			}
 			chiVals[k] = chiSquare(buckets);
@@ -147,7 +147,7 @@ public class ZigguratGaussianTests {
 		return 1.0 * x / EXPECTED_SAMPLES_PER_BUCKET - buckets.length * EXPECTED_SAMPLES_PER_BUCKET;
 	}
 	
-	private int whichPercentile(double x) {
+	private int whichBucket(double x) {
 		final double[] upperBoundaries = { -0.67448975, 0, 0.67448975 };
 		for (int i = 0; i < upperBoundaries.length; i++) {
 			if (x <= upperBoundaries[i]) return i;
@@ -155,7 +155,7 @@ public class ZigguratGaussianTests {
 		return upperBoundaries.length;
 	}
 	
-	private int whichPercentile(double x, double sigma) {
+	private int whichBucket(double x, double sigma) {
 		final double[] upperBoundaries = { -0.67448975, 0, 0.67448975 };
 		for (int i = 0; i < upperBoundaries.length; i++) {
 			upperBoundaries[i] = upperBoundaries[i] * sigma;
