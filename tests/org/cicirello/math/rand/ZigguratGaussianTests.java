@@ -35,107 +35,135 @@ public class ZigguratGaussianTests {
 	
 	// Test cases use chi square goodness of fit.  This constant 
 	// can be used to adjust the number of samples used for this test.
-	private static final int EXPECTED_SAMPLES_PER_BUCKET = 20;
+	private static final int EXPECTED_SAMPLES_PER_BUCKET = 30;
 	
 	// Change to true to see extra statistical output not otherwise used
-	// by automated tests (e.g., to see the specific chi square statistic value,
-	// with 95% confidence intervals).  Extra output sent to standard out.
+	// by automated tests (e.g., to see the specific chi square statistic value).  
+	// Extra output sent to standard out.
 	private static final boolean VERBOSE_OUTPUT = false;
 	
 	@Test
 	public void testRandom1() {
 		Random r = new Random(42);
-		
-		int[] buckets = new int[4];
+		int[] buckets = new int[20];
 		final int N = buckets.length * EXPECTED_SAMPLES_PER_BUCKET;
-		double[] chiVals = new double[40];
-		for (int k = 0; k < chiVals.length; k++) {
-			buckets = new int[4];
-			for (int i = 0; i < N; i++) {
-				int j = whichBucket(ZigguratGaussian.nextGaussian(r));
-				buckets[j]++;
-			}
-			chiVals[k] = chiSquare(buckets);
+		for (int i = 0; i < N; i++) {
+			int j = whichBucket(ZigguratGaussian.nextGaussian(r));
+			buckets[j]++;
 		}
-		double[] ci = confidenceInterval(chiVals, 0.95); 
-		double chi = ci[2];
-		assertTrue(chi <= 7.815); // 3 degrees of freedom, 95% percentage point of chi square distribution: 7.815
+		double chi = chiSquare(buckets);
+		assertTrue(chi <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution: 30.144
 		if (VERBOSE_OUTPUT) {
-			System.out.printf("Random, sigma=1, chi=%5.4f", chi);
-			System.out.printf(" conf. int.=[%5.4f, %5.4f]\n", ci[0], ci[1]);
+			System.out.printf("Random, sigma=1, chi=%5.4f\n", chi);
 		}
 	}
 	
 	@Test
 	public void testRandom10() {
 		Random r = new Random(42);
-		
-		int[] buckets = new int[4];
+		int[] buckets = new int[20];
 		final int N = buckets.length * EXPECTED_SAMPLES_PER_BUCKET;
-		double[] chiVals = new double[40];
-		for (int k = 0; k < chiVals.length; k++) {
-			buckets = new int[4];
-			for (int i = 0; i < N; i++) {
-				int j = whichBucket(ZigguratGaussian.nextGaussian(10, r), 10);
-				buckets[j]++;
-			}
-			chiVals[k] = chiSquare(buckets);
+		for (int i = 0; i < N; i++) {
+			int j = whichBucket(ZigguratGaussian.nextGaussian(10, r), 10);
+			buckets[j]++;
 		}
-		double[] ci = confidenceInterval(chiVals, 0.95); 
-		double chi = ci[2];
-		assertTrue(chi <= 7.815); // 3 degrees of freedom, 95% percentage point of chi square distribution: 7.815
+		double chi = chiSquare(buckets);
+		assertTrue(chi <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution: 30.144
 		if (VERBOSE_OUTPUT) {
-			System.out.printf("Random, sigma=10, chi=%5.4f", chi); 
-			System.out.printf(" conf. int.=[%5.4f, %5.4f]\n", ci[0], ci[1]);
+			System.out.printf("Random, sigma=10, chi=%5.4f\n", chi);
 		}
 	}
 	
 	@Test
 	public void testSplittableRandom1() {
 		SplittableRandom r = new SplittableRandom(42);
-		
-		int[] buckets = new int[4];
+		int[] buckets = new int[20];
 		final int N = buckets.length * EXPECTED_SAMPLES_PER_BUCKET;
-		double[] chiVals = new double[40];
-		for (int k = 0; k < chiVals.length; k++) {
-			buckets = new int[4];
-			for (int i = 0; i < N; i++) {
-				int j = whichBucket(ZigguratGaussian.nextGaussian(r));
-				buckets[j]++;
-			}
-			chiVals[k] = chiSquare(buckets);
+		for (int i = 0; i < N; i++) {
+			int j = whichBucket(ZigguratGaussian.nextGaussian(r));
+			buckets[j]++;
 		}
-		double[] ci = confidenceInterval(chiVals, 0.95); 
-		double chi = ci[2];
-		assertTrue(chi <= 7.815); // 3 degrees of freedom, 95% percentage point of chi square distribution: 7.815
+		double chi = chiSquare(buckets);
+		assertTrue(chi <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution: 30.144
 		if (VERBOSE_OUTPUT) {
-			System.out.printf("SplittableRandom, sigma=1, chi=%5.4f", chi); 
-			System.out.printf(" conf. int.=[%5.4f, %5.4f]\n", ci[0], ci[1]);
+			System.out.printf("SplittableRandom, sigma=1, chi=%5.4f\n", chi);
 		}
 	}
 	
 	@Test
 	public void testSplittableRandom10() {
 		SplittableRandom r = new SplittableRandom(42);
-		
-		int[] buckets = new int[4];
+		int[] buckets = new int[20];
 		final int N = buckets.length * EXPECTED_SAMPLES_PER_BUCKET;
-		double[] chiVals = new double[40];
-		for (int k = 0; k < chiVals.length; k++) {
-			buckets = new int[4];
-			for (int i = 0; i < N; i++) {
-				int j = whichBucket(ZigguratGaussian.nextGaussian(10, r), 10);
-				buckets[j]++;
-			}
-			chiVals[k] = chiSquare(buckets);
+		for (int i = 0; i < N; i++) {
+			int j = whichBucket(ZigguratGaussian.nextGaussian(10, r), 10);
+			buckets[j]++;
 		}
-		double[] ci = confidenceInterval(chiVals, 0.95); 
-		double chi = ci[2];
-		assertTrue(chi <= 7.815); // 3 degrees of freedom, 95% percentage point of chi square distribution: 7.815
+		double chi = chiSquare(buckets);
+		assertTrue(chi <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution: 30.144
 		if (VERBOSE_OUTPUT) {
-			System.out.printf("SplittableRandom, sigma=10, chi=%5.4f", chi); 
-			System.out.printf(" conf. int.=[%5.4f, %5.4f]\n", ci[0], ci[1]);
+			System.out.printf("SplittableRandom, sigma=10, chi=%5.4f\n", chi);
 		}
+	}
+	
+	@Test
+	public void testNoParamNextGaussian1() {
+		// Since we cannot set the seed for the random number generator
+		// in this case (ThreadLocalRandom does not allow setting seeds),
+		// we do not do any goodness of fit testing here.  Without the ability 
+		// to set a seed, the chi square test statistic would be different
+		// each test run, and tests at the 95% level could fail on average 1
+		// out of every 20 runs and still be statistically valid.
+		
+		// Also note that ThreadLocalRandom implements the same pseudorandom
+		// number generator algorithm as SplittableRandom, without the split
+		// functionality.  And our implementation of ZigguratGaussian.nextGaussian()
+		// delegates computation to ZigguratGaussian.nextGaussian(Random) by passing
+		// ThreadLocalRandom.current() as the param since ThreadLocalRandom extends
+		// Random.  So if the other test cases pass the goodness of fit tests, we
+		// should be fine here as well.
+		
+		// We simply test instead that ZigguratGaussian.nextGaussian() 
+		// gives both negative and positive values over a large number of trials.  
+		boolean positive = false;
+		boolean negative = false;
+		for (int i = 0; i < 1000; i++) {
+			double x = ZigguratGaussian.nextGaussian();
+			if (x < 0) negative = true;
+			else if (x > 0) positive = true;
+			if (positive && negative) break;
+		}
+		assertTrue(positive && negative);
+	}
+	
+	@Test
+	public void testNoParamNextGaussian10() {
+		// Since we cannot set the seed for the random number generator
+		// in this case (ThreadLocalRandom does not allow setting seeds),
+		// we do not do any goodness of fit testing here.  Without the ability 
+		// to set a seed, the chi square test statistic would be different
+		// each test run, and tests at the 95% level could fail on average 1
+		// out of every 20 runs and still be statistically valid.
+		
+		// Also note that ThreadLocalRandom implements the same pseudorandom
+		// number generator algorithm as SplittableRandom, without the split
+		// functionality.  And our implementation of ZigguratGaussian.nextGaussian()
+		// delegates computation to ZigguratGaussian.nextGaussian(Random) by passing
+		// ThreadLocalRandom.current() as the param since ThreadLocalRandom extends
+		// Random.  So if the other test cases pass the goodness of fit tests, we
+		// should be fine here as well.
+		
+		// We simply test instead that ZigguratGaussian.nextGaussian() 
+		// gives both negative and positive values over a large number of trials.  
+		boolean positive = false;
+		boolean negative = false;
+		for (int i = 0; i < 1000; i++) {
+			double x = ZigguratGaussian.nextGaussian(10);
+			if (x < 0) negative = true;
+			else if (x > 0) positive = true;
+			if (positive && negative) break;
+		}
+		assertTrue(positive && negative);
 	}
 	
 	
@@ -148,7 +176,13 @@ public class ZigguratGaussianTests {
 	}
 	
 	private int whichBucket(double x) {
-		final double[] upperBoundaries = { -0.67448975, 0, 0.67448975 };
+		final double[] upperBoundaries = {
+			-1.644853627, -1.281551566, -1.036433389, -0.841621234,
+			-0.67448975, -0.524400513, -0.385320466, -0.253347103,
+			-0.125661347, 0, 0.125661347, 0.253347103, 0.385320466,
+			0.524400513, 0.67448975, 0.841621234, 1.036433389,
+			1.281551566, 1.644853627
+		};
 		for (int i = 0; i < upperBoundaries.length; i++) {
 			if (x <= upperBoundaries[i]) return i;
 		}
@@ -156,7 +190,13 @@ public class ZigguratGaussianTests {
 	}
 	
 	private int whichBucket(double x, double sigma) {
-		final double[] upperBoundaries = { -0.67448975, 0, 0.67448975 };
+		final double[] upperBoundaries = {
+			-1.644853627, -1.281551566, -1.036433389, -0.841621234,
+			-0.67448975, -0.524400513, -0.385320466, -0.253347103,
+			-0.125661347, 0, 0.125661347, 0.253347103, 0.385320466,
+			0.524400513, 0.67448975, 0.841621234, 1.036433389,
+			1.281551566, 1.644853627
+		};
 		for (int i = 0; i < upperBoundaries.length; i++) {
 			upperBoundaries[i] = upperBoundaries[i] * sigma;
 		}
@@ -164,14 +204,5 @@ public class ZigguratGaussianTests {
 			if (x <= upperBoundaries[i]) return i;
 		}
 		return upperBoundaries.length;
-	}
-	
-	private double[] confidenceInterval(double[] chi, double p) {
-		int keep = (int)Math.round(chi.length * p);
-		int left = (chi.length - keep) / 2;
-		int right = left + keep - 1;
-		Arrays.sort(chi);
-		double median = (chi.length & 1) == 0 ? 0.5*(chi[chi.length/2] + chi[chi.length/2-1]) : chi[chi.length/2]; 
-		return new double[] {chi[left], chi[right], median};
 	}
 }
