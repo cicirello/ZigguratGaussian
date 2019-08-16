@@ -101,7 +101,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * 
  * @author <a href=https://www.cicirello.org/ target=_top>Vincent A. Cicirello</a>, 
  * <a href=https://www.cicirello.org/ target=_top>https://www.cicirello.org/</a>
- * @version 8.9.2019
+ * @version 8.16.2019
  */
 public final class ZigguratGaussian {
 	
@@ -171,7 +171,15 @@ public final class ZigguratGaussian {
 	// Extremely minor optimization to save multiplication of constants.
 	// Not done in C version (but C compiler would probably do this).
 	// Probably unnecessary in Java as well (Java JIT might make this optimization).
-	private static final double HALF_PARAM_R = 0.5 * PARAM_R;
+	private static final double HALF_PARAM_R = 1.72214323838; // 0.5 * PARAM_R
+	
+	// Another optimization that is not done in the C version.
+	// This one probably would not be done by the C compiler, and
+	// also probably not done by the Java JIT.
+	// Specifically, rather than divide by PARAM_R, we set this constant
+	// to 1 / PARAM_R, and then use a multiplication.  Multiplication is
+	// faster than division.
+	private static final double PARAM_R_INV = 0.2903358959097643; // 1.0 / PARAM_R
 	
 	// tabulated values for the height of the Ziggurat levels 
 	private static final double[] ytab = {
@@ -356,7 +364,7 @@ public final class ZigguratGaussian {
 			// and the other 7 bits for i.
 			//
 			// In this Java language port, I instead make a single call to
-			// the nextInt() method to get a random 32 bit integer, using the
+			// the nextInt() method to get one random 32 bit integer, using the
 			// left most bit for sign, the next 7 bits for i, and the right
 			// 24 bits for j.  
 			int i = r.nextInt();	  
@@ -373,7 +381,10 @@ public final class ZigguratGaussian {
 				double y1 = ytab[i+1];
 				y = y1 + (y0 - y1) * r.nextDouble();
 			} else {
-				x = PARAM_R - StrictMath.log(1.0 - r.nextDouble()) / PARAM_R;
+				// Includes a couple optimizations not done in original C version.
+				// See the comments where PARAM_R_INV and HALF_PARAM_R are declared
+				// for explanation.
+				x = PARAM_R - StrictMath.log(1.0 - r.nextDouble()) * PARAM_R_INV;
 				y = StrictMath.exp(-PARAM_R * (x - HALF_PARAM_R)) * r.nextDouble();
 			}
 
@@ -422,7 +433,10 @@ public final class ZigguratGaussian {
 				double y1 = ytab[i+1];
 				y = y1 + (y0 - y1) * r.nextDouble();
 			} else {
-				x = PARAM_R - StrictMath.log(1.0 - r.nextDouble()) / PARAM_R;
+				// Includes a couple optimizations not done in original C version.
+				// See the comments where PARAM_R_INV and HALF_PARAM_R are declared
+				// for explanation.
+				x = PARAM_R - StrictMath.log(1.0 - r.nextDouble()) * PARAM_R_INV;
 				y = StrictMath.exp(-PARAM_R * (x - HALF_PARAM_R)) * r.nextDouble();
 			}
 
