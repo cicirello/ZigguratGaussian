@@ -6,6 +6,10 @@ Copyright (C) 2015, 2017-2020 Vincent A. Cicirello.
 
 https://www.cicirello.org/
 
+| __Packages and Releases__ |  |
+| :--- | :--- |
+| __Source and Build Info__ | [![build](https://github.com/cicirello/ZigguratGaussian/workflows/build/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions?query=workflow%3Abuild) [![GitHub](https://img.shields.io/github/license/cicirello/ZigguratGaussian)](https://github.com/cicirello/ZigguratGaussian/blob/master/LICENSE) |
+
 ## Overview
 
 This repository contains a Java implementation of the Ziggurat 
