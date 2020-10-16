@@ -1,8 +1,8 @@
-# ZigguratGaussian
+# Ziggurat Gaussian
 
 ## Java implementation of the Ziggurat algorithm for generating Gaussian distributed random numbers
 
-Copyright (C) 2015, 2017-2019 Vincent A. Cicirello.
+Copyright (C) 2015, 2017-2020 Vincent A. Cicirello.
 
 https://www.cicirello.org/
 
@@ -14,10 +14,10 @@ The Ziggurat algorithm is significantly faster than the more commonly encountere
 Polar method, and has some other desirable statistical properties.
 The ZigguratGaussian class is a Java port of the GNU Scientific 
 Library's C implementation (Voss, 2005) of the Ziggurat method.
-In porting to Java, we have made a few subtle, and minor, optimizations, the details of
+In porting to Java, we have made several optimizations, the details of
 which can be found in the source code comments, which highlights any
-differences between this Java implementation and the C implementation on which it
-is based.
+differences between this Java implementation and the 
+C implementation on which it is based.
 
 This Java implementation originated as part of an effort to speed
 up the runtime of a parallel genetic algorithm (PGA).  The PGA in
@@ -40,6 +40,12 @@ additional experimental data:
 * P. H. W. Leong, G. Zhang, D. Lee, W. Luk, and J. Villasenor. [A Comment on the Implementation of the Ziggurat Method](https://www.jstatsoft.org/article/view/v012i07). *Journal of Statistical Software*. 12(7):1–4, 2005. 
 * J. Voss. [The Ziggurat Method for Generating Gaussian Random Numbers](http://www.seehuhn.de/pages/ziggurat). GSL: GNU Scientific Library. 2005. 
 
-## Repository Organization
+## Build with Maven
 
-Source code is found in the /src folder.  JUnit test cases are found in the /tests folder.
+If you want to build from the source, then execute `mvn package` at the root
+of the repository.
+
+## License
+
+The example programs in this repository are licensed under 
+the [GNU General Public License 3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
