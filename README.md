@@ -49,6 +49,42 @@ additional experimental data:
 If you want to build from the source, then execute `mvn package` at the root
 of the repository.
 
+## Importing the Library from Maven Central
+
+Add this to the dependencies section of your pom.xml, replacing 
+the version number with the version that you want to use.
+
+```XML
+<dependency>
+  <groupId>org.cicirello</groupId>
+  <artifactId>ziggurat</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
+## Importing the Library from GitHub Packages
+
+If you'd prefer to import from GitHub Packages, rather than 
+Maven Central: (1) add the dependency as indicated in 
+previous section above, and (2) add 
+the following to the repositories section of your pom.xml:
+
+```XML
+<repository>
+  <id>github</id>
+  <name>GitHub cicirello Apache Maven Packages</name>
+  <url>https://maven.pkg.github.com/cicirello/ZigguratGaussian</url>
+  <releases><enabled>true</enabled></releases>
+  <snapshots><enabled>true</enabled></snapshots>
+</repository>
+```
+
+## Downloading Jar Files
+
+If you don't use a dependency manager that supports importing from Maven Central,
+or if you simply prefer to download manually, prebuilt jars are also attached to 
+each [GitHub Release](https://github.com/cicirello/ZigguratGaussian/releases).
+
 ## License
 
 The example programs in this repository are licensed under 
