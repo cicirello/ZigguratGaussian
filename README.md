@@ -1,4 +1,4 @@
-# ZigguratGaussian
+# Ziggurat Gaussian
 
 ## Java implementation of the Ziggurat algorithm for generating Gaussian distributed random numbers
 
@@ -14,10 +14,10 @@ The Ziggurat algorithm is significantly faster than the more commonly encountere
 Polar method, and has some other desirable statistical properties.
 The ZigguratGaussian class is a Java port of the GNU Scientific 
 Library's C implementation (Voss, 2005) of the Ziggurat method.
-In porting to Java, we have made a few subtle, and minor, optimizations, the details of
+In porting to Java, we have made several optimizations, the details of
 which can be found in the source code comments, which highlights any
-differences between this Java implementation and the C implementation on which it
-is based.
+differences between this Java implementation and the 
+C implementation on which it is based.
 
 This Java implementation originated as part of an effort to speed
 up the runtime of a parallel genetic algorithm (PGA).  The PGA in
