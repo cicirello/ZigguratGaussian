@@ -12,6 +12,5 @@
 		"Ziggurat",
 		"Gaussian",
 		"Java"
-	],
-	"description": "Java implementation of the Ziggurat algorithm for generating Gaussian distributed pseudorandom numbers. The Ziggurat algorithm is significantly faster than the  more commonly encountered Polar method, and has some other desirable statistical properties. The ZigguratGaussian class is a Java port of the GNU Scientific Library C implementation (Voss, 2005) of the Ziggurat method. In porting to Java, we have made several optimizations, the details of which can be found in the source code comments, which highlights any 	differences between this Java implementation and the C implementation on which it is based. This package also includes an implementation of the Polar Method, included to enable comparing speed advantage of the Ziggurat algorithm."
+	]
 }
