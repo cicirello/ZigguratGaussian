@@ -151,9 +151,6 @@
 								</goals>
 							</execution>
 						</executions>
-						<configuration>
-							<outputDirectory>reports</outputDirectory>
-						</configuration>
 					</plugin>
 				</plugins>
 			</build>
