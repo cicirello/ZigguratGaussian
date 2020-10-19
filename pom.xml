@@ -165,7 +165,7 @@
 	<scm>
 		<connection>scm:git:git://github.com/cicirello/ZigguratGaussian.git</connection>
 		<developerConnection>scm:git:ssh://github.com:cicirello/ZigguratGaussian.git</developerConnection>
-		<url>http://github.com/cicirello/ZigguratGaussian/tree/main</url>
+		<url>http://github.com/cicirello/ZigguratGaussian/tree/master</url>
 	</scm>
   
 	<dependencies>
