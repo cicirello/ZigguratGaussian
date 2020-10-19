@@ -6,6 +6,10 @@ Copyright (C) 2015, 2017-2020 Vincent A. Cicirello.
 
 https://www.cicirello.org/
 
+| __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central)](https://search.maven.org/artifact/org.cicirello/ziggurat) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) |
+| :--- | :--- |
+| __Source and Build Info__ | [![build](https://github.com/cicirello/ZigguratGaussian/workflows/build/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions?query=workflow%3Abuild) [![GitHub](https://img.shields.io/github/license/cicirello/ZigguratGaussian)](https://github.com/cicirello/ZigguratGaussian/blob/master/LICENSE) |
+
 ## Overview
 
 This repository contains a Java implementation of the Ziggurat 
@@ -44,6 +48,42 @@ additional experimental data:
 
 If you want to build from the source, then execute `mvn package` at the root
 of the repository.
+
+## Importing the Library from Maven Central
+
+Add this to the dependencies section of your pom.xml, replacing 
+the version number with the version that you want to use.
+
+```XML
+<dependency>
+  <groupId>org.cicirello</groupId>
+  <artifactId>ziggurat</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
+## Importing the Library from GitHub Packages
+
+If you'd prefer to import from GitHub Packages, rather than 
+Maven Central: (1) add the dependency as indicated in 
+previous section above, and (2) add 
+the following to the repositories section of your pom.xml:
+
+```XML
+<repository>
+  <id>github</id>
+  <name>GitHub cicirello Apache Maven Packages</name>
+  <url>https://maven.pkg.github.com/cicirello/ZigguratGaussian</url>
+  <releases><enabled>true</enabled></releases>
+  <snapshots><enabled>true</enabled></snapshots>
+</repository>
+```
+
+## Downloading Jar Files
+
+If you don't use a dependency manager that supports importing from Maven Central,
+or if you simply prefer to download manually, prebuilt jars are also attached to 
+each [GitHub Release](https://github.com/cicirello/ZigguratGaussian/releases).
 
 ## License
 
