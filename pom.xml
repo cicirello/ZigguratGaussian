@@ -11,10 +11,10 @@
   
 	<name>Ziggurat Gaussian</name>
 	
-	<description>This repository contains a Java implementation 
-	of the Ziggurat algorithm for generating Gaussian distributed 
-	pseudorandom numbers. The Ziggurat algorithm is significantly 
-	faster than the more commonly encountered Polar method, and 
+	<description>Java implementation of the Ziggurat algorithm 
+	for generating Gaussian distributed pseudorandom numbers. 
+	The Ziggurat algorithm is significantly faster than the 
+	more commonly encountered Polar method, and 
 	has some other desirable statistical properties. The 
 	ZigguratGaussian class is a Java port of the GNU Scientific 
 	Library's C implementation (Voss, 2005) of the Ziggurat method.
@@ -165,7 +165,7 @@
 	<scm>
 		<connection>scm:git:git://github.com/cicirello/ZigguratGaussian.git</connection>
 		<developerConnection>scm:git:ssh://github.com:cicirello/ZigguratGaussian.git</developerConnection>
-		<url>http://github.com/cicirello/ZigguratGaussian/tree/main</url>
+		<url>http://github.com/cicirello/ZigguratGaussian/tree/master</url>
 	</scm>
   
 	<dependencies>
