@@ -38,6 +38,8 @@ jobs:
           git add ./\*.svg
           git commit -m "Jacoco Coverage Badge Update"
           git push
+        else
+          echo "Badge File Not Changed"
         fi
 
     - name: Upload Jacoco coverage report
