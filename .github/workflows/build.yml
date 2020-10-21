@@ -30,6 +30,7 @@ jobs:
         echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
 
     - name: Commit and push jacoco badge
+      if: ${{ github.event_name == 'push' }}
       run: |
         if [ $(git status | grep -c "github/badges") != "0" ]; then
           echo "Badge File Changed"
