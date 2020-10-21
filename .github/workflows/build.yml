@@ -19,4 +19,16 @@ jobs:
         java-version: 1.11
 
     - name: Build with Maven
-      run: mvn -B package -Pcoverage
+      run: mvn -B test -Pcoverage
+
+    - name: Generate Jacoco Badge
+      id: jacoco
+      uses: cicirello/jacoco-badge-generator@development
+
+    - name: Inspect results
+      run: |
+        echo "Badge"
+        cat .github/badges/jacoco.svg
+        echo " "
+        echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
+
