@@ -45,6 +45,11 @@ additional experimental data:
 * P. H. W. Leong, G. Zhang, D. Lee, W. Luk, and J. Villasenor. [A Comment on the Implementation of the Ziggurat Method](https://www.jstatsoft.org/article/view/v012i07). *Journal of Statistical Software*. 12(7):1–4, 2005. 
 * J. Voss. [The Ziggurat Method for Generating Gaussian Random Numbers](http://www.seehuhn.de/pages/ziggurat). GSL: GNU Scientific Library. 2005. 
 
+## Java 11+
+
+The jars of the library, distributed via Maven Central, GitHub Packages, and GitHub Releases, are 
+built with OpenJDK 11.   
+
 ## Build with Maven
 
 If you want to build from the source, then execute `mvn package` at the root
