@@ -8,7 +8,8 @@ https://www.cicirello.org/
 
 | __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central)](https://search.maven.org/artifact/org.cicirello/ziggurat) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) |
 | :--- | :--- |
-| __Source and Build Info__ | [![build](https://github.com/cicirello/ZigguratGaussian/workflows/build/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions?query=workflow%3Abuild) [![coverage](https://github.com/cicirello/ZigguratGaussian/blob/master/.github/badges/jacoco.svg)](https://github.com/cicirello/ZigguratGaussian/actions?query=workflow%3Abuild) [![GitHub](https://img.shields.io/github/license/cicirello/ZigguratGaussian)](https://github.com/cicirello/ZigguratGaussian/blob/master/LICENSE) |
+| __Source and Build Info__ | [![build](https://github.com/cicirello/ZigguratGaussian/workflows/build/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions?query=workflow%3Abuild) [![GitHub](https://img.shields.io/github/license/cicirello/ZigguratGaussian)](https://github.com/cicirello/ZigguratGaussian/blob/master/LICENSE) |
+| __Jacoco Test Coverage__ | [![coverage](https://github.com/cicirello/ZigguratGaussian/blob/master/.github/badges/jacoco.svg)](https://github.com/cicirello/ZigguratGaussian/actions?query=workflow%3Abuild) [![branches coverage](https://github.com/cicirello/ZigguratGaussian/blob/master/.github/badges/branches.svg)](https://github.com/cicirello/ZigguratGaussian/actions?query=workflow%3Abuild)  |
 | __DOI__ | [![DOI](https://zenodo.org/badge/201526811.svg)](https://zenodo.org/badge/latestdoi/201526811) |
 
 ## Overview
@@ -64,7 +65,7 @@ the version number with the version that you want to use.
 <dependency>
   <groupId>org.cicirello</groupId>
   <artifactId>ziggurat</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.2</version>
 </dependency>
 ```
 
