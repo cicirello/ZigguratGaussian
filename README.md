@@ -2,15 +2,16 @@
 
 ## Java implementation of the Ziggurat algorithm for generating Gaussian distributed random numbers
 
-Copyright (C) 2015, 2017-2020 Vincent A. Cicirello.
+Copyright (C) 2015, 2017-2021 Vincent A. Cicirello.
 
 https://www.cicirello.org/
 
 | __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central)](https://search.maven.org/artifact/org.cicirello/ziggurat) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) |
 | :--- | :--- |
-| __Source and Build Info__ | [![build](https://github.com/cicirello/ZigguratGaussian/workflows/build/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions?query=workflow%3Abuild) [![GitHub](https://img.shields.io/github/license/cicirello/ZigguratGaussian)](https://github.com/cicirello/ZigguratGaussian/blob/master/LICENSE) |
-| __Jacoco Test Coverage__ | [![coverage](https://github.com/cicirello/ZigguratGaussian/blob/master/.github/badges/jacoco.svg)](https://github.com/cicirello/ZigguratGaussian/actions?query=workflow%3Abuild) [![branches coverage](https://github.com/cicirello/ZigguratGaussian/blob/master/.github/badges/branches.svg)](https://github.com/cicirello/ZigguratGaussian/actions?query=workflow%3Abuild)  |
+| __Build Status__ | [![build](https://github.com/cicirello/ZigguratGaussian/workflows/build/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml) [![CodeQL](https://github.com/cicirello/ZigguratGaussian/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/codeql-analysis.yml) |
+| __Jacoco Test Coverage__ | [![coverage](.github/badges/jacoco.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml) [![branches coverage](.github/badges/branches.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml)  |
 | __DOI__ | [![DOI](https://zenodo.org/badge/201526811.svg)](https://zenodo.org/badge/latestdoi/201526811) |
+| __License__ | [![GitHub](https://img.shields.io/github/license/cicirello/ZigguratGaussian)](https://github.com/cicirello/ZigguratGaussian/blob/master/LICENSE) |
 
 ## Overview
 
