@@ -1,7 +1,5 @@
 # Ziggurat Gaussian
 
-## Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm
-
 [<img alt="Ziggurat Gaussian - Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm" 
      src="images/ziggurat-gaussian.png" width="640">](#ziggurat-gaussian)
 
@@ -14,7 +12,7 @@ Copyright (C) 2015, 2017-2021 [Vincent A. Cicirello](https://www.cicirello.org/)
 | __DOI__ | [![DOI](https://zenodo.org/badge/201526811.svg)](https://zenodo.org/badge/latestdoi/201526811) |
 | __License__ | [![GitHub](https://img.shields.io/github/license/cicirello/ZigguratGaussian)](https://github.com/cicirello/ZigguratGaussian/blob/master/LICENSE) |
 
-## Overview
+## Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm
 
 This repository contains a Java implementation of the Ziggurat 
 algorithm for generating Gaussian distributed pseudorandom numbers.
