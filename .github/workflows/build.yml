@@ -57,6 +57,12 @@ jobs:
           git push
         fi
 
+    - name: Upload Jacoco coverage report
+      uses: actions/upload-artifact@v2
+      with:
+        name: jacoco-report
+        path: target/site/jacoco/
+
     #- name: Create pull request
     #  if: ${{ github.event_name == 'push' }}
     #  uses: peter-evans/create-pull-request@v3.10.0
@@ -74,8 +80,3 @@ jobs:
     #    branch: create-pull-request/badge
     #    delete-branch: true
 
-    - name: Upload Jacoco coverage report
-      uses: actions/upload-artifact@v2
-      with:
-        name: jacoco-report
-        path: target/site/jacoco/
