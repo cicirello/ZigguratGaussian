@@ -39,6 +39,8 @@ jobs:
         badges-directory: endpoints/ziggurat
         generate-coverage-endpoint: true
         generate-branches-endpoint: true
+        generate-branches-badge: false
+        generate-coverage-badge: false
 
     - name: Log coverage percentage
       run: |
