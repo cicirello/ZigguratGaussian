@@ -1,4 +1,5 @@
 {
+    "title": "Ziggurat Gaussian: Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm",
     "license": "GPL-3.0-or-later", 
     "upload_type": "software", 
     "creators": [
