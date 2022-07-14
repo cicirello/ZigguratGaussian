@@ -3,7 +3,7 @@
  * of the Ziggurat method for generating Gaussian distributed
  * random numbers.
  *
- * Copyright 2015, 2017-2020 Vincent A. Cicirello, <https://www.cicirello.org/>.
+ * Copyright 2015, 2017-2022 Vincent A. Cicirello, <https://www.cicirello.org/>.
  *
  * This program is free software: you can 
  * redistribute it and/or modify it under the terms of the GNU 
@@ -40,7 +40,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA	 02111-1307	 USA
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
  
 package org.cicirello.math.rand;
@@ -97,7 +97,6 @@ import java.util.concurrent.ThreadLocalRandom;
  * 
  * @author <a href=https://www.cicirello.org/ target=_top>Vincent A. Cicirello</a>, 
  * <a href=https://www.cicirello.org/ target=_top>https://www.cicirello.org/</a>
- * @version 8.16.2019
  */
 public final class ZigguratGaussian {
 	

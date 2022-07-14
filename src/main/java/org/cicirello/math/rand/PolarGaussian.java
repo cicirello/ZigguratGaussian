@@ -2,7 +2,7 @@
  * Java implementation of the Polar Method
  * for generating Gaussian distributed random numbers.
  *
- * Copyright 2015, 2017-2020 Vincent A. Cicirello, <https://www.cicirello.org/>.
+ * Copyright 2015, 2017-2020, 2022 Vincent A. Cicirello, <https://www.cicirello.org/>.
  *
  * This program is free software: you can 
  * redistribute it and/or modify it under the terms of the GNU 
@@ -64,7 +64,6 @@ import java.util.concurrent.ThreadLocalRandom;
  * 
  * @author <a href=https://www.cicirello.org/ target=_top>Vincent A. Cicirello</a>, 
  * <a href=https://www.cicirello.org/ target=_top>https://www.cicirello.org/</a>
- * @version 8.15.2019
  */
 public final class PolarGaussian {
 	
