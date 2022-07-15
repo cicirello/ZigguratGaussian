@@ -1,16 +1,18 @@
 # Ziggurat Gaussian
 
 [<img alt="Ziggurat Gaussian - Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm" 
-     src="images/ziggurat-gaussian.png" width="640">](#ziggurat-gaussian)
+     src="https://raw.githubusercontent.com/cicirello/ZigguratGaussian/master/images/ziggurat-gaussian.png" width="640">](#ziggurat-gaussian)
 
-Copyright (C) 2015, 2017-2021 [Vincent A. Cicirello](https://www.cicirello.org/).
+Copyright (C) 2015, 2017-2022 [Vincent A. Cicirello](https://www.cicirello.org/).
 
-| __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central&logo=apachemaven)](https://search.maven.org/artifact/org.cicirello/ziggurat) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) |
+| __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central&logo=apachemaven)](https://search.maven.org/artifact/org.cicirello/ziggurat) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) [![JitPack](https://jitpack.io/v/org.cicirello/ZigguratGaussian.svg)](https://jitpack.io/#org.cicirello/ZigguratGaussian) |
 | :--- | :--- |
 | __Build Status__ | [![build](https://github.com/cicirello/ZigguratGaussian/workflows/build/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml) [![CodeQL](https://github.com/cicirello/ZigguratGaussian/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/codeql-analysis.yml) |
-| __JaCoCo Test Coverage__ | [![coverage](../badges/jacoco.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml) [![branches coverage](../badges/branches.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml)  |
+| __JaCoCo Test Coverage__ | [![coverage](https://raw.githubusercontent.com/cicirello/ZigguratGaussian/badges/jacoco.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml) [![branches coverage](https://raw.githubusercontent.com/cicirello/ZigguratGaussian/badges/branches.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml)  |
+| __Security__ | [![Snyk security score](https://snyk-widget.herokuapp.com/badge/mvn/org.cicirello/ziggurat/badge.svg)](https://snyk.io/vuln/maven%3Aorg.cicirello%3Aziggurat) [![Snyk Known Vulnerabilities](https://snyk.io/test/github/cicirello/ZigguratGaussian/badge.svg)](https://snyk.io/test/github/cicirello/ZigguratGaussian) |
 | __DOI__ | [![DOI](https://zenodo.org/badge/201526811.svg)](https://zenodo.org/badge/latestdoi/201526811) |
 | __License__ | [![GitHub](https://img.shields.io/github/license/cicirello/ZigguratGaussian)](https://github.com/cicirello/ZigguratGaussian/blob/master/LICENSE) |
+| __Support__ | [![GitHub Sponsors](https://img.shields.io/badge/sponsor-30363D?logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/cicirello) [![Liberapay](https://img.shields.io/badge/Liberapay-F6C915?logo=liberapay&logoColor=black)](https://liberapay.com/cicirello) [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?logo=ko-fi&logoColor=white)](https://ko-fi.com/cicirello) |
 
 ## Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm
 
@@ -46,17 +48,38 @@ additional experimental data:
 * P. H. W. Leong, G. Zhang, D. Lee, W. Luk, and J. Villasenor. [A Comment on the Implementation of the Ziggurat Method](https://www.jstatsoft.org/article/view/v012i07). *Journal of Statistical Software*. 12(7):1–4, 2005. 
 * J. Voss. [The Ziggurat Method for Generating Gaussian Random Numbers](http://www.seehuhn.de/pages/ziggurat). GSL: GNU Scientific Library. 2005. 
 
+The entirety of this library has been absorbed 
+by [&rho;&mu;, a Java library of Randomization enHancements and Other Math Utilities](https://github.com/cicirello/rho-mu), which
+includes additional enhanced random number generation, among other related functionality. However, [&rho;&mu;](https://rho-mu.cicirello.org/)
+requires Java 17+, whereas this Ziggurat implementation supports Java 11+.
+
+## Versioning Scheme
+
+The library uses [Semantic Versioning](https://semver.org/) with 
+version numbers of the form: MAJOR.MINOR.PATCH, where differences 
+in MAJOR correspond to incompatible API changes, differences in MINOR 
+correspond to introduction of backwards compatible new functionality, 
+and PATCH corresponds to backwards compatible bug fixes.
+
 ## Java 11+
 
-The jars of the library, distributed via Maven Central, GitHub Packages, and GitHub Releases, are 
-built with OpenJDK 11.   
+The jars of the library, distributed via Maven Central, JitPack, GitHub Packages, and GitHub Releases, are 
+built with OpenJDK 17 but for a target of Java 11.   
 
 ## Build with Maven
 
 If you want to build from the source, then execute `mvn package` at the root
-of the repository.
+of the repository. The library should build with Java 11+.
 
-## Importing the Library from Maven Central
+## Importing from Package Repositories
+
+Prebuilt artifacts are regularly published to Maven Central, GitHub Packages, and JitPack. In most
+cases, you'll want to use Maven Central. JitPack may be useful if you want to build your project against
+the latest unreleased version, essentially against the default branch of the repository, or a specific commit.
+Releases are published to JitPack and GitHub Packages mainly as a fall-back in the unlikely scenario that
+Maven Central is unavailable.
+
+### Importing from Maven Central
 
 Add this to the dependencies section of your pom.xml, replacing 
 the version number with the version that you want to use.
@@ -65,15 +88,14 @@ the version number with the version that you want to use.
 <dependency>
   <groupId>org.cicirello</groupId>
   <artifactId>ziggurat</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.4</version>
 </dependency>
 ```
 
-## Importing the Library from GitHub Packages
+### Importing from GitHub Packages
 
-If you'd prefer to import from GitHub Packages, rather than 
-Maven Central: (1) add the dependency as indicated in 
-previous section above, and (2) add 
+If you'd prefer to import from GitHub Packages, rather than Maven Central, 
+then: (1) add the dependency as indicated in previous section above, and (2) add 
 the following to the repositories section of your pom.xml:
 
 ```XML
@@ -81,12 +103,53 @@ the following to the repositories section of your pom.xml:
   <id>github</id>
   <name>GitHub cicirello Apache Maven Packages</name>
   <url>https://maven.pkg.github.com/cicirello/ZigguratGaussian</url>
-  <releases><enabled>true</enabled></releases>
-  <snapshots><enabled>true</enabled></snapshots>
 </repository>
 ```
 
-## Downloading Jar Files
+Note that GitHub Packages requires authenticating to GitHub.
+
+### Importing from JitPack
+
+You can also import from JitPack. As above, you need to first add JitPack to
+the repositories section of your pom.xml, such as:
+
+```XML
+<repository>
+  <id>jitpack.io</id>
+  <url>https://jitpack.io</url>
+</repository>
+```
+
+JitPack works a bit differently than Maven Central. Specifically, JitPack builds
+artifacts on-demand from the GitHub repository the first time a version is requested. We have
+configured our domain on JitPack for the groupId, but on JitPack you use the GitHub repository
+name as the artifactId. In many cases this may be the same as the Maven Central artifactId, but 
+this is not the case here. The Maven Central artifactId is `ziggurat`, but the repository name
+is `ZigguratGaussian`. Therefore, from JitPack, you need the following dependency 
+(just replace `x.y.z` with the version that you want):
+
+```XML
+<dependency>
+  <groupId>org.cicirello</groupId>
+  <artifactId>ZigguratGaussian</artifactId>
+  <version>x.y.z</version>
+</dependency>
+```
+
+We have primarily configured JitPack as a source of SNAPSHOT builds. If you want to build
+your project against the latest commit, specify the dependency as:
+
+```XML
+<dependency>
+  <groupId>org.cicirello</groupId>
+  <artifactId>ZigguratGaussian</artifactId>
+  <version>master-SNAPSHOT</version>
+</dependency>
+```
+
+You can also build against a specific commit using the commit hash as the version.
+
+### Downloading Jar Files
 
 If you don't use a dependency manager that supports importing from Maven Central,
 or if you simply prefer to download manually, prebuilt jars are also attached to 
