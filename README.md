@@ -48,6 +48,8 @@ additional experimental data:
 * P. H. W. Leong, G. Zhang, D. Lee, W. Luk, and J. Villasenor. [A Comment on the Implementation of the Ziggurat Method](https://www.jstatsoft.org/article/view/v012i07). *Journal of Statistical Software*. 12(7):1–4, 2005. 
 * J. Voss. [The Ziggurat Method for Generating Gaussian Random Numbers](http://www.seehuhn.de/pages/ziggurat). GSL: GNU Scientific Library. 2005. 
 
+## See [&rho;&mu;](https://github.com/cicirello/rho-mu) for Expanded Functionality
+
 The entirety of this library has been absorbed 
 by [&rho;&mu;, a Java library of Randomization enHancements and Other Math Utilities](https://github.com/cicirello/rho-mu), which
 includes additional enhanced random number generation, among other related functionality. However, [&rho;&mu;](https://rho-mu.cicirello.org/)
