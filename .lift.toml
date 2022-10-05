@@ -9,10 +9,3 @@ jdkVersion = "11"
 # the SecureRandom class should instead be used.  But this is not the case here.
 
 ignoreRules = ["PREDICTABLE_RANDOM"]
-
-# Ignore results from these directories
-
-ignoreFiles = """
-src/test/
-"""
-
