@@ -10,9 +10,3 @@ jdkVersion = "11"
 
 ignoreRules = ["PREDICTABLE_RANDOM"]
 
-# Ignore results from these directories
-
-ignoreFiles = """
-src/test/
-"""
-
