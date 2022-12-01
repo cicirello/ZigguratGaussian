@@ -9,13 +9,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 ### Changed
-* Reformatted all sourcecode to [Google Java Style](https://google.github.io/styleguide/javaguide.html).
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### CI/CD
+
+### Other
+
+
+## [1.0.5] - 2022-12-01
+
+### Changed
+* Reformatted all sourcecode to [Google Java Style](https://google.github.io/styleguide/javaguide.html).
 
 ### CI/CD
 * Configured [Spotify's fmt-maven-plugin](https://github.com/spotify/fmt-maven-plugin) to format to Google Java Style during builds.
