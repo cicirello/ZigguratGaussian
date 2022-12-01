@@ -527,16 +527,16 @@ public final class ZigguratGaussian {
 }
 
 /* NOTICE: The original C language version (which is Copyright (C) 2005	 Jochen Voss)
-   * can be found below.	All code and comments below are directly from
-   * the C language version from the GNU Scientific Library.	I have simply
-   * placed comment markers around the C language code below.
-   *
-   * I have chosen to keep a copy of the original C code intact below as a
-   * reference point for the origin of my Java implementation, and so that the
-   * interested programmer can compare my Java version with the original C version.
-   *
-   * ORIGINAL C VERSION BEGINS BELOW THIS LINE.
-   */
+ * can be found below.	All code and comments below are directly from
+ * the C language version from the GNU Scientific Library.	I have simply
+ * placed comment markers around the C language code below.
+ *
+ * I have chosen to keep a copy of the original C code intact below as a
+ * reference point for the origin of my Java implementation, and so that the
+ * interested programmer can compare my Java version with the original C version.
+ *
+ * ORIGINAL C VERSION BEGINS BELOW THIS LINE.
+ */
 
 /*
  * This routine is based on the following article, with a couple of
