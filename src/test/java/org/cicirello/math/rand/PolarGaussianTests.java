@@ -54,9 +54,8 @@ public class PolarGaussianTests {
       System.out.printf("Random, sigma=1, chi=%5.4f\n", chi);
     }
     assertTrue(
-        chi
-            <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution:
-                        // 30.144
+        chi <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution:
+    // 30.144
   }
 
   @Test
@@ -73,9 +72,8 @@ public class PolarGaussianTests {
       System.out.printf("Random, sigma=10, chi=%5.4f\n", chi);
     }
     assertTrue(
-        chi
-            <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution:
-                        // 30.144
+        chi <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution:
+    // 30.144
   }
 
   @Test
@@ -92,9 +90,8 @@ public class PolarGaussianTests {
       System.out.printf("SplittableRandom, sigma=1, chi=%5.4f\n", chi);
     }
     assertTrue(
-        chi
-            <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution:
-                        // 30.144
+        chi <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution:
+    // 30.144
   }
 
   @Test
@@ -111,9 +108,8 @@ public class PolarGaussianTests {
       System.out.printf("SplittableRandom, sigma=10, chi=%5.4f\n", chi);
     }
     assertTrue(
-        chi
-            <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution:
-                        // 30.144
+        chi <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution:
+    // 30.144
   }
 
   @Test
