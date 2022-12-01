@@ -4,11 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - 2022-07-15
+## [Unreleased] - 2022-12-01
 
 ### Added
 
 ### Changed
+* Reformatted all sourcecode to [Google Java Style](https://google.github.io/styleguide/javaguide.html).
 
 ### Deprecated
 
@@ -17,8 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### CI/CD
+* Configured [Spotify's fmt-maven-plugin](https://github.com/spotify/fmt-maven-plugin) to format to Google Java Style during builds. 
 
 ### Other
+* Adopted [Google Java Style](https://google.github.io/styleguide/javaguide.html).
 
 
 ## [1.0.4] - 2022-07-15
