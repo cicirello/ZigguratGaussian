@@ -3,9 +3,9 @@
 [<img alt="Ziggurat Gaussian - Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm" 
      src="https://raw.githubusercontent.com/cicirello/ZigguratGaussian/master/images/ziggurat-gaussian.png" width="640">](#ziggurat-gaussian)
 
-Copyright (C) 2015, 2017-2022 [Vincent A. Cicirello](https://www.cicirello.org/).
+Copyright (C) 2015, 2017-2023 [Vincent A. Cicirello](https://www.cicirello.org/).
 
-| __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central&logo=apachemaven)](https://search.maven.org/artifact/org.cicirello/ziggurat) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) [![JitPack](https://jitpack.io/v/org.cicirello/ZigguratGaussian.svg)](https://jitpack.io/#org.cicirello/ZigguratGaussian) |
+| __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central&logo=apachemaven)](https://central.sonatype.com/search?namespace=org.cicirello&q=ziggurat) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) [![JitPack](https://jitpack.io/v/org.cicirello/ZigguratGaussian.svg)](https://jitpack.io/#org.cicirello/ZigguratGaussian) |
 | :--- | :--- |
 | __Build Status__ | [![build](https://github.com/cicirello/ZigguratGaussian/workflows/build/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml) [![CodeQL](https://github.com/cicirello/ZigguratGaussian/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/codeql-analysis.yml) |
 | __JaCoCo Test Coverage__ | [![coverage](https://raw.githubusercontent.com/cicirello/ZigguratGaussian/badges/jacoco.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml) [![branches coverage](https://raw.githubusercontent.com/cicirello/ZigguratGaussian/badges/branches.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml)  |
