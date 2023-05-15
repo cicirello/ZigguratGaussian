@@ -26,7 +26,7 @@
  * <p>Copyright &copy; 2015, 2017-2022 <a href="https://www.cicirello.org/" target=_top>Vincent A.
  * Cicirello</a>.
  *
- * <p><a href="https://search.maven.org/artifact/org.cicirello/ziggurat"><img
+ * <p><a href="https://central.sonatype.com/artifact/org.cicirello/ziggurat/"><img
  * src="https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?logo=apachemaven"
  * alt="Maven Central" height="20" width="151"></a> <a
  * href="https://github.com/cicirello/ZigguratGaussian/releases"><img
