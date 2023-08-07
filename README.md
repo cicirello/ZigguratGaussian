@@ -73,6 +73,19 @@ built with OpenJDK 17 but for a target of Java 11.
 If you want to build from the source, then execute `mvn package` at the root
 of the repository. The library should build with Java 11+.
 
+To include generation of a code coverage report during the build,
+execute `mvn package -Pcoverage` at the root of the repository to 
+enable a Maven profile that executes JaCoCo during the test phase.
+
+To run all static analysis tools (i.e., SpotBugs, Find Security Bugs,
+refactor-first), execute `mvn package -Panalysis` to enable a Maven 
+profile that executes the various static analysis tools that we are 
+using. The SpotBugs html report will be found in the `target` directory, 
+or you can use the SpotBugs GUI with: `mvn spotbugs:gui -Panalysis`. The 
+refactor-first report will be found in the `target/site` directory.
+
+To run all of the above: `mvn package -P "analysis,coverage"`.
+
 ## Importing from Package Repositories
 
 Prebuilt artifacts are regularly published to Maven Central, GitHub Packages, and JitPack. In most
