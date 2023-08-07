@@ -1,0 +1,13 @@
+<FindBugsFilter>
+  <!-- Random number generation is not a security application in this library -->
+  <Match>
+    <Bug pattern="PREDICTABLE_RANDOM" />
+  </Match>
+  
+  <!-- implementation of a numerical algorithm (false positive) -->
+  <Match>
+    <Bug pattern="FL_FLOATS_AS_LOOP_COUNTERS" />
+	<Class name="org.cicirello.math.rand.PolarGaussian" />
+	<Method name="nextGaussian" />
+  </Match>
+</FindBugsFilter>
