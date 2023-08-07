@@ -68,24 +68,6 @@ and PATCH corresponds to backwards compatible bug fixes.
 The jars of the library, distributed via Maven Central, JitPack, GitHub Packages, and GitHub Releases, are 
 built with OpenJDK 17 but for a target of Java 11.   
 
-## Build with Maven
-
-If you want to build from the source, then execute `mvn package` at the root
-of the repository. The library should build with Java 11+.
-
-To include generation of a code coverage report during the build,
-execute `mvn package -Pcoverage` at the root of the repository to 
-enable a Maven profile that executes JaCoCo during the test phase.
-
-To run all static analysis tools (i.e., SpotBugs, Find Security Bugs,
-refactor-first), execute `mvn package -Panalysis` to enable a Maven 
-profile that executes the various static analysis tools that we are 
-using. The SpotBugs html report will be found in the `target` directory, 
-or you can use the SpotBugs GUI with: `mvn spotbugs:gui -Panalysis`. The 
-refactor-first report will be found in the `target/site` directory.
-
-To run all of the above: `mvn package -P "analysis,coverage"`.
-
 ## Importing from Package Repositories
 
 Prebuilt artifacts are regularly published to Maven Central, GitHub Packages, and JitPack. In most
@@ -169,6 +151,24 @@ You can also build against a specific commit using the commit hash as the versio
 If you don't use a dependency manager that supports importing from Maven Central,
 or if you simply prefer to download manually, prebuilt jars are also attached to 
 each [GitHub Release](https://github.com/cicirello/ZigguratGaussian/releases).
+
+## Build with Maven
+
+If you want to build from the source, then execute `mvn package` at the root
+of the repository. The library should build with Java 11+.
+
+To include generation of a code coverage report during the build,
+execute `mvn package -Pcoverage` at the root of the repository to 
+enable a Maven profile that executes JaCoCo during the test phase.
+
+To run all static analysis tools (i.e., SpotBugs, Find Security Bugs,
+refactor-first), execute `mvn package -Panalysis` to enable a Maven 
+profile that executes the various static analysis tools that we are 
+using. The SpotBugs html report will be found in the `target` directory, 
+or you can use the SpotBugs GUI with: `mvn spotbugs:gui -Panalysis`. The 
+refactor-first report will be found in the `target/site` directory.
+
+To run all of the above: `mvn package -P "analysis,coverage"`.
 
 ## License
 
