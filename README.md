@@ -5,7 +5,7 @@
 
 Copyright (C) 2015, 2017-2023 [Vincent A. Cicirello](https://www.cicirello.org/).
 
-| __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central&logo=apachemaven)](https://central.sonatype.com/artifact/org.cicirello/ziggurat/) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) [![JitPack](https://jitpack.io/v/org.cicirello/ZigguratGaussian.svg)](https://jitpack.io/#org.cicirello/ZigguratGaussian) |
+| __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central&logo=apachemaven)](https://central.sonatype.com/artifact/org.cicirello/ziggurat/) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) |
 | :--- | :--- |
 | __Build Status__ | [![build](https://github.com/cicirello/ZigguratGaussian/workflows/build/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml) [![CodeQL](https://github.com/cicirello/ZigguratGaussian/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/codeql-analysis.yml) |
 | __JaCoCo Test Coverage__ | [![coverage](https://raw.githubusercontent.com/cicirello/ZigguratGaussian/badges/jacoco.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml) [![branches coverage](https://raw.githubusercontent.com/cicirello/ZigguratGaussian/badges/branches.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml)  |
@@ -65,16 +65,14 @@ and PATCH corresponds to backwards compatible bug fixes.
 
 ## Java 11+
 
-The jars of the library, distributed via Maven Central, JitPack, GitHub Packages, and GitHub Releases, are 
-built with OpenJDK 17 but for a target of Java 11.   
+The jars of the library, distributed via Maven Central, GitHub Packages, 
+and GitHub Releases, are built with OpenJDK 17 but for a target of Java 11.   
 
 ## Importing from Package Repositories
 
-Prebuilt artifacts are regularly published to Maven Central, GitHub Packages, and JitPack. In most
-cases, you'll want to use Maven Central. JitPack may be useful if you want to build your project against
-the latest unreleased version, essentially against the default branch of the repository, or a specific commit.
-Releases are published to JitPack and GitHub Packages mainly as a fall-back in the unlikely scenario that
-Maven Central is unavailable.
+Prebuilt artifacts are regularly published to Maven Central and GitHub Packages. In 
+most cases, you'll want to use Maven Central. Releases are published to GitHub 
+Packages mainly as a fall-back in the unlikely scenario that Maven Central is unavailable.
 
 ### Importing from Maven Central
 
@@ -104,47 +102,6 @@ the following to the repositories section of your pom.xml:
 ```
 
 Note that GitHub Packages requires authenticating to GitHub.
-
-### Importing from JitPack
-
-You can also import from JitPack. As above, you need to first add JitPack to
-the repositories section of your pom.xml, such as:
-
-```XML
-<repository>
-  <id>jitpack.io</id>
-  <url>https://jitpack.io</url>
-</repository>
-```
-
-JitPack works a bit differently than Maven Central. Specifically, JitPack builds
-artifacts on-demand from the GitHub repository the first time a version is requested. We have
-configured our domain on JitPack for the groupId, but on JitPack you use the GitHub repository
-name as the artifactId. In many cases this may be the same as the Maven Central artifactId, but 
-this is not the case here. The Maven Central artifactId is `ziggurat`, but the repository name
-is `ZigguratGaussian`. Therefore, from JitPack, you need the following dependency 
-(just replace `x.y.z` with the version that you want):
-
-```XML
-<dependency>
-  <groupId>org.cicirello</groupId>
-  <artifactId>ZigguratGaussian</artifactId>
-  <version>x.y.z</version>
-</dependency>
-```
-
-We have primarily configured JitPack as a source of SNAPSHOT builds. If you want to build
-your project against the latest commit, specify the dependency as:
-
-```XML
-<dependency>
-  <groupId>org.cicirello</groupId>
-  <artifactId>ZigguratGaussian</artifactId>
-  <version>master-SNAPSHOT</version>
-</dependency>
-```
-
-You can also build against a specific commit using the commit hash as the version.
 
 ### Downloading Jar Files
 
