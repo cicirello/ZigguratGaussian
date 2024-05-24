@@ -1,6 +1,6 @@
 /*
  * Experiment comparing org.cicirello.ziggurat versus Java builtin implementation.
- * Copyright (C) 2023 Vincent A. Cicirello
+ * Copyright (C) 2023-2024 Vincent A. Cicirello
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,10 +18,7 @@
 
 package org.cicirello.experiments.ziggurat;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.util.Random;
 import java.util.SplittableRandom;
 import java.util.concurrent.ThreadLocalRandom;
@@ -48,8 +45,8 @@ import org.openjdk.jmh.annotations.OutputTimeUnit;
  */
 public class TimeZigguratVersusJavaBuiltin {
 
-  private static Random random = new Random(42);
-  private static SplittableRandom splittable = new SplittableRandom(42);
+  private static final Random random = new Random(42);
+  private static final SplittableRandom splittable = new SplittableRandom(42);
 
   @Benchmark
   @Fork(value = 1)
@@ -107,12 +104,13 @@ public class TimeZigguratVersusJavaBuiltin {
   public static void main(String[] args) throws IOException {
     printCopyrightAndLicense();
 
-    URLClassLoader classLoader =
-        (URLClassLoader) TimeZigguratVersusJavaBuiltin.class.getClassLoader();
+    /*
+    URLClassLoader classLoader = (URLClassLoader) TimeZigguratVersusJavaBuiltin.class.getClassLoader();
     StringBuilder classpath = new StringBuilder();
     for (URL url : classLoader.getURLs())
       classpath.append(url.getPath()).append(File.pathSeparator);
     System.setProperty("java.class.path", classpath.toString());
+    */
     org.openjdk.jmh.Main.main(args);
   }
 
@@ -121,7 +119,7 @@ public class TimeZigguratVersusJavaBuiltin {
     System.out.println();
     System.out.println(
         "Experiment comparing org.cicirello.ziggurat versus Java builtin implementation.");
-    System.out.println("Copyright (C) 2023 Vincent A. Cicirello");
+    System.out.println("Copyright (C) 2023-2024 Vincent A. Cicirello");
     System.out.println("This program comes with ABSOLUTELY NO WARRANTY.  This is free");
     System.out.println("software, and you are welcome to redistribute it under certain");
     System.out.println("conditions.  See the GNU General Public License for more");
