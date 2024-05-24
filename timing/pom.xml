@@ -208,10 +208,36 @@
 							<artifact>*:*</artifact>
 							<excludes>
 								<exclude>module-info.class</exclude>
+								<exclude>LICENSE</exclude>
+								<exclude>THIRD-PARTY</exclude>
 							</excludes>
 						</filter>
 						<filter>
 							<artifact>org.cicirello:ziggurat</artifact>
+							<excludes>
+								<exclude>META-INF/MANIFEST.MF</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>org.openjdk.jmh:jmh-generator-annprocess</artifact>
+							<excludes>
+								<exclude>META-INF/MANIFEST.MF</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>org.openjdk.jmh:jmh-core</artifact>
+							<excludes>
+								<exclude>META-INF/MANIFEST.MF</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>net.sf.jopt-simple:jopt-simple</artifact>
+							<excludes>
+								<exclude>META-INF/MANIFEST.MF</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>org.apache.commons:commons-math3</artifact>
 							<excludes>
 								<exclude>META-INF/MANIFEST.MF</exclude>
 							</excludes>

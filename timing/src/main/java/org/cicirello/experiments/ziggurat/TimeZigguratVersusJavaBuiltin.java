@@ -51,7 +51,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.All)
+  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
   public double builtinThreadLocalRandom() {
     return ThreadLocalRandom.current().nextGaussian();
   }
@@ -59,7 +59,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.All)
+  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
   public double builtinSplittableRandom() {
     return splittable.nextGaussian();
   }
@@ -67,7 +67,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.All)
+  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
   public double builtinRandom() {
     return random.nextGaussian();
   }
@@ -75,7 +75,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.All)
+  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
   public double zigguratThreadLocalRandom() {
     return ZigguratGaussian.nextGaussian();
   }
@@ -83,7 +83,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.All)
+  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
   public double zigguratSplittableRandom() {
     return ZigguratGaussian.nextGaussian(splittable);
   }
@@ -91,7 +91,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.All)
+  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
   public double zigguratRandom() {
     return ZigguratGaussian.nextGaussian(random);
   }
