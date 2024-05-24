@@ -51,7 +51,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.AverageTime)
+  @BenchmarkMode(Mode.All)
   public double builtinThreadLocalRandom() {
     return ThreadLocalRandom.current().nextGaussian();
   }
@@ -59,7 +59,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.AverageTime)
+  @BenchmarkMode(Mode.All)
   public double builtinSplittableRandom() {
     return splittable.nextGaussian();
   }
@@ -67,7 +67,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.AverageTime)
+  @BenchmarkMode(Mode.All)
   public double builtinRandom() {
     return random.nextGaussian();
   }
@@ -75,7 +75,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.AverageTime)
+  @BenchmarkMode(Mode.All)
   public double zigguratThreadLocalRandom() {
     return ZigguratGaussian.nextGaussian();
   }
@@ -83,7 +83,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.AverageTime)
+  @BenchmarkMode(Mode.All)
   public double zigguratSplittableRandom() {
     return ZigguratGaussian.nextGaussian(splittable);
   }
@@ -91,7 +91,7 @@ public class TimeZigguratVersusJavaBuiltin {
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode(Mode.AverageTime)
+  @BenchmarkMode(Mode.All)
   public double zigguratRandom() {
     return ZigguratGaussian.nextGaussian(random);
   }
@@ -103,14 +103,6 @@ public class TimeZigguratVersusJavaBuiltin {
    */
   public static void main(String[] args) throws IOException {
     printCopyrightAndLicense();
-
-    /*
-    URLClassLoader classLoader = (URLClassLoader) TimeZigguratVersusJavaBuiltin.class.getClassLoader();
-    StringBuilder classpath = new StringBuilder();
-    for (URL url : classLoader.getURLs())
-      classpath.append(url.getPath()).append(File.pathSeparator);
-    System.setProperty("java.class.path", classpath.toString());
-    */
     org.openjdk.jmh.Main.main(args);
   }
 
