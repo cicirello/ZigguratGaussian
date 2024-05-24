@@ -19,7 +19,7 @@
 	The aim of this program is to empirically verify that Java's builtin Gaussian
 	method is at least as good as my implementation for Java 17+. If you run this
 	on earlier versions of Java, the Java builtin implementation should be slower.
-	But on newer, it will probably be faster..
+	But on newer, it will probably be faster.
 	</description>
 	
 	<url>https://github.com/cicirello/ZigguratGaussian</url>
@@ -31,7 +31,7 @@
 		<distribution>repo</distribution>
 		<comments>
 		Experiment comparing org.cicirello.ziggurat versus Java builtin implementation.
-		Copyright (C) 2023 Vincent A. Cicirello.
+		Copyright (C) 2023-2024 Vincent A. Cicirello.
  
 		This program is free software: you can redistribute it and/or modify
 		it under the terms of the GNU General Public License as published by
@@ -176,7 +176,7 @@
 					<version>false</version>
 					<nosince>true</nosince>
 					<notimestamp>true</notimestamp>
-					<bottom><![CDATA[Copyright &copy; 2023 <a href=\"https://www.cicirello.org/\" target=_top>Vincent A. Cicirello</a>.  All rights reserved.]]></bottom>
+					<bottom><![CDATA[Copyright &copy; 2023-2024 <a href=\"https://www.cicirello.org/\" target=_top>Vincent A. Cicirello</a>.  All rights reserved.]]></bottom>
 				</configuration>
 			</plugin>
 			<plugin>
