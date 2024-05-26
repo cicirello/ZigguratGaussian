@@ -23,6 +23,7 @@ import java.util.Random;
 import java.util.SplittableRandom;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
+import java.util.random.RandomGenerator;
 import org.cicirello.math.rand.ZigguratGaussian;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
@@ -48,52 +49,104 @@ public class TimeZigguratVersusJavaBuiltin {
   private static final Random random = new Random(42);
   private static final SplittableRandom splittable = new SplittableRandom(42);
 
+  private static final RandomGenerator wrappedThreadLocalRandom =
+      new RandomGenerator() {
+        @Override
+        public long nextLong() {
+          return ThreadLocalRandom.current().nextLong();
+        }
+      };
+
+  /**
+   * Benchmark the Java API's ThreadLocalRandom class's builtin implementation of nextGaussian.
+   *
+   * @return the next Gaussian into JMH's blackhole
+   */
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
+  @BenchmarkMode(Mode.AverageTime)
   public double builtinThreadLocalRandom() {
     return ThreadLocalRandom.current().nextGaussian();
   }
 
+  /**
+   * Benchmark the Java API's SplittableRandom class's builtin implementation of nextGaussian.
+   *
+   * @return the next Gaussian into JMH's blackhole
+   */
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
+  @BenchmarkMode(Mode.AverageTime)
   public double builtinSplittableRandom() {
     return splittable.nextGaussian();
   }
 
+  /**
+   * Benchmark the Java API's Random class's builtin implementation of nextGaussian.
+   *
+   * @return the next Gaussian into JMH's blackhole
+   */
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
+  @BenchmarkMode(Mode.AverageTime)
   public double builtinRandom() {
     return random.nextGaussian();
   }
 
+  /**
+   * Benchmark my implementation of ZigguratGaussian using ThreadLocalRandom.
+   *
+   * @return the next Gaussian into JMH's blackhole
+   */
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
+  @BenchmarkMode(Mode.AverageTime)
   public double zigguratThreadLocalRandom() {
     return ZigguratGaussian.nextGaussian();
   }
 
+  /**
+   * Benchmark my implementation of ZigguratGaussian using SplittableRandom.
+   *
+   * @return the next Gaussian into JMH's blackhole
+   */
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
+  @BenchmarkMode(Mode.AverageTime)
   public double zigguratSplittableRandom() {
     return ZigguratGaussian.nextGaussian(splittable);
   }
 
+  /**
+   * Benchmark my implementation of ZigguratGaussian using Random.
+   *
+   * @return the next Gaussian into JMH's blackhole
+   */
   @Benchmark
   @Fork(value = 1)
   @OutputTimeUnit(TimeUnit.NANOSECONDS)
-  @BenchmarkMode({Mode.AverageTime, Mode.Throughput})
+  @BenchmarkMode(Mode.AverageTime)
   public double zigguratRandom() {
     return ZigguratGaussian.nextGaussian(random);
+  }
+
+  /**
+   * Coerce Java to use the RandomGenerator interface's implementation of the ziggurat algorithm
+   * with the ThreadLocalRandom class.
+   *
+   * @return the next Gaussian into JMH's blackhole
+   */
+  @Benchmark
+  @Fork(value = 1)
+  @OutputTimeUnit(TimeUnit.NANOSECONDS)
+  @BenchmarkMode(Mode.AverageTime)
+  public double wrappedThreadLocalRandom() {
+    return wrappedThreadLocalRandom.nextGaussian();
   }
 
   /**
