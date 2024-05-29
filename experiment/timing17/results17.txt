@@ -1,0 +1,254 @@
+
+Experiment comparing org.cicirello.ziggurat versus Java builtin implementation.
+Copyright (C) 2023-2024 Vincent A. Cicirello
+This program comes with ABSOLUTELY NO WARRANTY.  This is free
+software, and you are welcome to redistribute it under certain
+conditions.  See the GNU General Public License for more
+details: https://www.gnu.org/licenses/gpl-3.0.html
+
+# JMH version: 1.37
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8
+# VM invoker: D:\InstalledPrograms\Adoptium\jdk-17.0.2.8-hotspot\bin\java.exe
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.builtinRandom
+
+# Run progress: 0.00% complete, ETA 00:11:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 107.678 ns/op
+# Warmup Iteration   2: 106.841 ns/op
+# Warmup Iteration   3: 102.926 ns/op
+# Warmup Iteration   4: 103.072 ns/op
+# Warmup Iteration   5: 102.974 ns/op
+Iteration   1: 102.820 ns/op
+Iteration   2: 103.388 ns/op
+Iteration   3: 103.066 ns/op
+Iteration   4: 102.784 ns/op
+Iteration   5: 103.129 ns/op
+
+
+Result "org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.builtinRandom":
+  103.037 ±(99.9%) 0.951 ns/op [Average]
+  (min, avg, max) = (102.784, 103.037, 103.388), stdev = 0.247
+  CI (99.9%): [102.086, 103.988] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8
+# VM invoker: D:\InstalledPrograms\Adoptium\jdk-17.0.2.8-hotspot\bin\java.exe
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.builtinSplittableRandom
+
+# Run progress: 14.29% complete, ETA 00:10:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 10.203 ns/op
+# Warmup Iteration   2: 9.905 ns/op
+# Warmup Iteration   3: 8.924 ns/op
+# Warmup Iteration   4: 8.924 ns/op
+# Warmup Iteration   5: 8.922 ns/op
+Iteration   1: 8.919 ns/op
+Iteration   2: 8.922 ns/op
+Iteration   3: 8.931 ns/op
+Iteration   4: 8.927 ns/op
+Iteration   5: 8.936 ns/op
+
+
+Result "org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.builtinSplittableRandom":
+  8.927 ±(99.9%) 0.026 ns/op [Average]
+  (min, avg, max) = (8.919, 8.927, 8.936), stdev = 0.007
+  CI (99.9%): [8.901, 8.953] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8
+# VM invoker: D:\InstalledPrograms\Adoptium\jdk-17.0.2.8-hotspot\bin\java.exe
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.builtinThreadLocalRandom
+
+# Run progress: 28.57% complete, ETA 00:08:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 90.549 ns/op
+# Warmup Iteration   2: 90.284 ns/op
+# Warmup Iteration   3: 88.341 ns/op
+# Warmup Iteration   4: 88.344 ns/op
+# Warmup Iteration   5: 88.320 ns/op
+Iteration   1: 89.693 ns/op
+Iteration   2: 88.742 ns/op
+Iteration   3: 88.323 ns/op
+Iteration   4: 88.695 ns/op
+Iteration   5: 88.414 ns/op
+
+
+Result "org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.builtinThreadLocalRandom":
+  88.774 ±(99.9%) 2.096 ns/op [Average]
+  (min, avg, max) = (88.323, 88.774, 89.693), stdev = 0.544
+  CI (99.9%): [86.678, 90.870] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8
+# VM invoker: D:\InstalledPrograms\Adoptium\jdk-17.0.2.8-hotspot\bin\java.exe
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.wrappedThreadLocalRandom
+
+# Run progress: 42.86% complete, ETA 00:06:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 11.577 ns/op
+# Warmup Iteration   2: 11.821 ns/op
+# Warmup Iteration   3: 10.427 ns/op
+# Warmup Iteration   4: 10.372 ns/op
+# Warmup Iteration   5: 10.384 ns/op
+Iteration   1: 10.370 ns/op
+Iteration   2: 10.444 ns/op
+Iteration   3: 10.395 ns/op
+Iteration   4: 10.380 ns/op
+Iteration   5: 10.368 ns/op
+
+
+Result "org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.wrappedThreadLocalRandom":
+  10.392 ±(99.9%) 0.121 ns/op [Average]
+  (min, avg, max) = (10.368, 10.392, 10.444), stdev = 0.031
+  CI (99.9%): [10.271, 10.512] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8
+# VM invoker: D:\InstalledPrograms\Adoptium\jdk-17.0.2.8-hotspot\bin\java.exe
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.zigguratRandom
+
+# Run progress: 57.14% complete, ETA 00:05:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 19.023 ns/op
+# Warmup Iteration   2: 19.227 ns/op
+# Warmup Iteration   3: 17.438 ns/op
+# Warmup Iteration   4: 17.355 ns/op
+# Warmup Iteration   5: 17.330 ns/op
+Iteration   1: 17.305 ns/op
+Iteration   2: 17.405 ns/op
+Iteration   3: 17.501 ns/op
+Iteration   4: 17.331 ns/op
+Iteration   5: 17.422 ns/op
+
+
+Result "org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.zigguratRandom":
+  17.393 ±(99.9%) 0.300 ns/op [Average]
+  (min, avg, max) = (17.305, 17.393, 17.501), stdev = 0.078
+  CI (99.9%): [17.092, 17.693] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8
+# VM invoker: D:\InstalledPrograms\Adoptium\jdk-17.0.2.8-hotspot\bin\java.exe
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.zigguratSplittableRandom
+
+# Run progress: 71.43% complete, ETA 00:03:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 10.731 ns/op
+# Warmup Iteration   2: 9.703 ns/op
+# Warmup Iteration   3: 10.069 ns/op
+# Warmup Iteration   4: 10.094 ns/op
+# Warmup Iteration   5: 10.067 ns/op
+Iteration   1: 10.073 ns/op
+Iteration   2: 10.073 ns/op
+Iteration   3: 10.153 ns/op
+Iteration   4: 10.076 ns/op
+Iteration   5: 10.069 ns/op
+
+
+Result "org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.zigguratSplittableRandom":
+  10.089 ±(99.9%) 0.139 ns/op [Average]
+  (min, avg, max) = (10.069, 10.089, 10.153), stdev = 0.036
+  CI (99.9%): [9.950, 10.228] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8
+# VM invoker: D:\InstalledPrograms\Adoptium\jdk-17.0.2.8-hotspot\bin\java.exe
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.zigguratThreadLocalRandom
+
+# Run progress: 85.71% complete, ETA 00:01:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 11.098 ns/op
+# Warmup Iteration   2: 10.803 ns/op
+# Warmup Iteration   3: 10.905 ns/op
+# Warmup Iteration   4: 10.892 ns/op
+# Warmup Iteration   5: 10.894 ns/op
+Iteration   1: 10.905 ns/op
+Iteration   2: 10.912 ns/op
+Iteration   3: 10.899 ns/op
+Iteration   4: 10.895 ns/op
+Iteration   5: 10.892 ns/op
+
+
+Result "org.cicirello.experiments.ziggurat.TimeZigguratVersusJavaBuiltin.zigguratThreadLocalRandom":
+  10.901 ±(99.9%) 0.032 ns/op [Average]
+  (min, avg, max) = (10.892, 10.901, 10.912), stdev = 0.008
+  CI (99.9%): [10.869, 10.932] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:11:44
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                Mode  Cnt    Score   Error  Units
+TimeZigguratVersusJavaBuiltin.builtinRandom              avgt    5  103.037 ± 0.951  ns/op
+TimeZigguratVersusJavaBuiltin.builtinSplittableRandom    avgt    5    8.927 ± 0.026  ns/op
+TimeZigguratVersusJavaBuiltin.builtinThreadLocalRandom   avgt    5   88.774 ± 2.096  ns/op
+TimeZigguratVersusJavaBuiltin.wrappedThreadLocalRandom   avgt    5   10.392 ± 0.121  ns/op
+TimeZigguratVersusJavaBuiltin.zigguratRandom             avgt    5   17.393 ± 0.300  ns/op
+TimeZigguratVersusJavaBuiltin.zigguratSplittableRandom   avgt    5   10.089 ± 0.139  ns/op
+TimeZigguratVersusJavaBuiltin.zigguratThreadLocalRandom  avgt    5   10.901 ± 0.032  ns/op

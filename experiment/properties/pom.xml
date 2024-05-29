@@ -1,0 +1,175 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ 
+	<groupId>org.cicirello</groupId>
+	<artifactId>what-gaussian</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+  
+	<name>Check which RandomGenerators use default Gaussian algorithm.</name>
+	
+	<description>Determines which of Java's builtin pseudorandom number generators 
+	use the RandomGenerator interface's default algorithm for nextGaussian, which
+	override it.
+	</description>
+	
+	<url>https://github.com/cicirello/ZigguratGaussian</url>
+
+	<licenses>
+		<license>
+		<name>GPL-3.0-or-later</name>
+		<url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
+		<distribution>repo</distribution>
+		<comments>
+		Check which RandomGenerators use default Gaussian algorithm.
+		Copyright (C) 2024 Vincent A. Cicirello.
+ 
+		This program is free software: you can redistribute it and/or modify
+		it under the terms of the GNU General Public License as published by
+		the Free Software Foundation, either version 3 of the License, or
+		(at your option) any later version.
+
+		This program is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		GNU General Public License for more details.
+
+		You should have received a copy of the GNU General Public License
+		along with this program.  If not, see https://www.gnu.org/licenses/.
+		</comments>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Vincent A Cicirello</name>
+			<email>development@cicirello.org</email>
+			<url>https://www.cicirello.org/</url>
+			<organization>Cicirello.org</organization>
+			<organizationUrl>https://www.cicirello.org/</organizationUrl>
+		</developer>
+	</developers>
+
+	<organization>
+		<name>Cicirello.org</name>
+		<url>https://www.cicirello.org/</url>
+	</organization>	
+
+	<profiles>
+		<profile>
+			<id>analysis</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.github.spotbugs</groupId>
+						<artifactId>spotbugs-maven-plugin</artifactId>
+						<version>4.8.1.0</version>
+						<configuration>
+							<htmlOutput>true</htmlOutput>
+							<excludeFilterFile>${session.executionRootDirectory}/spotbugs-exclude.xml</excludeFilterFile>
+							<plugins>
+								<plugin>
+									<groupId>com.h3xstream.findsecbugs</groupId>
+									<artifactId>findsecbugs-plugin</artifactId>
+									<version>1.12.0</version>
+								</plugin>
+							</plugins>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>test</phase>
+								<goals>
+									<goal>spotbugs</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<issueManagement>
+		<system>github</system>
+		<url>https://github.com/cicirello/ZigguratGaussian/issues</url>
+	</issueManagement>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.cicirello</groupId>
+			<artifactId>ziggurat</artifactId>
+			<version>1.0.5</version>
+		</dependency>
+	</dependencies>
+  
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.release>17</maven.compiler.release>
+		<maven.javadoc.skip>true</maven.javadoc.skip>
+	</properties>
+  
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<release>17</release>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.6.2</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<failOnWarnings>false</failOnWarnings>
+					<failOnError>true</failOnError>
+					<windowtitle>Check which RandomGenerators use default Gaussian algorithm</windowtitle>
+					<doctitle>Check which RandomGenerators use default Gaussian algorithm</doctitle>
+					<author>true</author>
+					<version>false</version>
+					<nosince>true</nosince>
+					<notimestamp>true</notimestamp>
+					<bottom><![CDATA[Copyright &copy; 2024 <a href=\"https://www.cicirello.org/\" target=_top>Vincent A. Cicirello</a>.  All rights reserved.]]></bottom>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify.fmt</groupId>
+				<artifactId>fmt-maven-plugin</artifactId>
+				<version>2.21.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

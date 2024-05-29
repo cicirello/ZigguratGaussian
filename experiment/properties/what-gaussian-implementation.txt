@@ -1,0 +1,15 @@
+     Group       RandomGenerator Where nextGaussian declared
+       LXM       L32X64MixRandom java.util.random.RandomGenerator
+       LXM     L128X128MixRandom java.util.random.RandomGenerator
+       LXM      L64X128MixRandom java.util.random.RandomGenerator
+       LXM    L128X1024MixRandom java.util.random.RandomGenerator
+       LXM L64X128StarStarRandom java.util.random.RandomGenerator
+       LXM      L64X256MixRandom java.util.random.RandomGenerator
+       LXM     L128X256MixRandom java.util.random.RandomGenerator
+       LXM     L64X1024MixRandom java.util.random.RandomGenerator
+    Legacy          SecureRandom java.util.Random
+    Legacy                Random java.util.Random
+    Legacy      SplittableRandom java.util.random.RandomGenerator
+ Xoroshiro  Xoroshiro128PlusPlus java.util.random.RandomGenerator
+   Xoshiro    Xoshiro256PlusPlus java.util.random.RandomGenerator
+    Legacy     ThreadLocalRandom java.util.Random
