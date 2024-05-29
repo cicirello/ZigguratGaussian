@@ -45,24 +45,25 @@ number generation relative to Java's builtin functionality:
 | Java 11 &le; version &lt; Java 17 | `Random`, `SecureRandom`, `SplittableRandom`,`ThreadLocalRandom` |
 | Java version &ge; Java 17 | `Random`, `SecureRandom`, `ThreadLocalRandom` |
 
-## More Detailed Information Including Experiments
-
-Some experiment source code and data can be found in the [experiment](experiment) directory.
-
-The following paper discusses experiments using the library with Java 17. In
-Java 17, several enhancements to random number generation were introduced, including
-replacing the polar method with a modified ziggurat for many of the random number
-generators. Some of the legacy generators still use the slow polar method, however. This
-report explores how and where our ziggurat library is still relevant in Java 17.
+Source code and data of experiments with Java 17 can be found in 
+the [experiment](experiment) directory. The following paper discusses 
+experiments using the library with Java 17. In Java 17, several enhancements 
+to random number generation were introduced, including several new random number
+geenrators a RandomGenerator interface, and a modified ziggurat for the new random 
+number generators as well as for `SplittableRandom`. The other legacy generators 
+still use the slow polar method, however. This report explores how and where our 
+ziggurat library is still relevant in Java 17.
 
 > Vincent A. Cicirello. 2024. [Fast Gaussian Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm](https://reports.cicirello.org/24/009/). Technical Report ALG-24-009, Cicirello.org, May 2024. [[PDF]](https://reports.cicirello.org/24/009/ALG-24-009.pdf)
 
-You can find some experimental data comparing the performance of a sequential
+You can find some additional experimental data comparing the performance of a sequential
 genetic algorithm (GA) using this implementation of the Ziggurat method for
 Gaussian mutation vs using the more common polar method, as well as experimental data
 for the same comparison but with a PGA, in the following paper:
 
 > V. A. Cicirello. [Impact of Random Number Generation on Parallel Genetic Algorithms](https://www.cicirello.org/publications/cicirello2018flairs.html). *Proceedings of the Thirty-First International Florida Artificial Intelligence Research Society Conference*, pages 2-7. AAAI Press, May 2018. [[PDF]](https://www.cicirello.org/publications/cicirello-flairs2018.pdf).
+
+## Background on the Algorithm Itself
 
 See the following articles for detailed description of the Ziggurat algorithm itself, as well as
 additional experimental data:
