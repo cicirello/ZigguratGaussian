@@ -1,10 +1,22 @@
-cff-version: "1.1.0"
-message: "If you use this software, please cite it using these metadata."
+cff-version: "1.2.0"
+message: "If you use this software, please cite it as below."
 authors: 
 - family-names: "Cicirello"
   given-names: "Vincent A"
   orcid: "https://orcid.org/0000-0003-1072-8559"
-title: "Ziggurat Gaussian: Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm"
+title: "Fast Gaussian Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm"
 doi: "10.5281/zenodo.4106912"
 license: "GPL-3.0-or-later"
 url: "https://github.com/cicirello/ZigguratGaussian"
+preferred-citation:
+  type: report
+  authors:
+  - family-names: "Cicirello"
+    given-names: "Vincent A"
+    orcid: "https://orcid.org/0000-0003-1072-8559"
+  institution: "Cicirello.org"
+  month: 5
+  year: 2024
+  title: "Fast Gaussian Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm"
+  url: "https://reports.cicirello.org/24/009/"
+  number: "ALG-24-009"
