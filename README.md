@@ -3,7 +3,7 @@
 [<img alt="Ziggurat Gaussian - Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm" 
      src="https://raw.githubusercontent.com/cicirello/ZigguratGaussian/master/images/ziggurat-gaussian.png" width="640">](#ziggurat-gaussian)
 
-Copyright (C) 2015, 2017-2023 [Vincent A. Cicirello](https://www.cicirello.org/).
+Copyright (C) 2015, 2017-2024 [Vincent A. Cicirello](https://www.cicirello.org/).
 
 | __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central&logo=apachemaven)](https://central.sonatype.com/artifact/org.cicirello/ziggurat/) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) |
 | :--- | :--- |
@@ -35,12 +35,34 @@ Java API is the polar method (nextGaussian method of the Random and
 ThreadLocalRandom classes, however the polar method is quite slow
 relative to other newer available alternatives, such as the Ziggurat method.
 
+## When to Use This Library
+
+The following table summarizes when this library will speed up Gaussian random
+number generation relative to Java's builtin functionality:
+
+| Java Version | Significantly Faster For  | 
+| --- | --- |
+| Java 11 &le; version &lt; Java 17 | `Random`, `SecureRandom`, `SplittableRandom`,`ThreadLocalRandom` |
+| Java version &ge; Java 17 | `Random`, `SecureRandom`, `ThreadLocalRandom` |
+
+## More Detailed Information Including Experiments
+
+Some experiment source code and data can be found in the [experiment](experiment) directory.
+
+The following paper discusses experiments using the library with Java 17. In
+Java 17, several enhancements to random number generation were introduced, including
+replacing the polar method with a modified ziggurat for many of the random number
+generators. Some of the legacy generators still use the slow polar method, however. This
+report explores how and where our ziggurat library is still relevant in Java 17.
+
+> Vincent A. Cicirello. 2024. [Fast Gaussian Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm](https://reports.cicirello.org/24/009/). Technical Report ALG-24-009, Cicirello.org, May 2024. [[PDF]](https://reports.cicirello.org/24/009/ALG-24-009.pdf)
+
 You can find some experimental data comparing the performance of a sequential
 genetic algorithm (GA) using this implementation of the Ziggurat method for
 Gaussian mutation vs using the more common polar method, as well as experimental data
 for the same comparison but with a PGA, in the following paper:
 
-> V. A. Cicirello. [Impact of Random Number Generation on Parallel Genetic Algorithms](https://www.cicirello.org/publications/cicirello2018flairs.html). *Proceedings of the Thirty-First International Florida Artificial Intelligence Research Society Conference*, pages 2-7. AAAI Press, May 2018.  
+> V. A. Cicirello. [Impact of Random Number Generation on Parallel Genetic Algorithms](https://www.cicirello.org/publications/cicirello2018flairs.html). *Proceedings of the Thirty-First International Florida Artificial Intelligence Research Society Conference*, pages 2-7. AAAI Press, May 2018. [[PDF]](https://www.cicirello.org/publications/cicirello-flairs2018.pdf).
 
 See the following articles for detailed description of the Ziggurat algorithm itself, as well as
 additional experimental data:
@@ -83,7 +105,7 @@ the version number with the version that you want to use.
 <dependency>
   <groupId>org.cicirello</groupId>
   <artifactId>ziggurat</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
 </dependency>
 ```
 
