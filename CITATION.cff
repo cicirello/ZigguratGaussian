@@ -19,4 +19,7 @@ preferred-citation:
   year: 2024
   title: "Fast Gaussian Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm"
   url: "https://reports.cicirello.org/24/009/"
-  number: "ALG-24-009"
+  identifiers:
+  - type: other
+    value: "ALG-24-009"
+    description: "Technical Report"	
