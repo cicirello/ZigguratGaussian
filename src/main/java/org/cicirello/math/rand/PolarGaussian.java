@@ -2,7 +2,7 @@
  * Java implementation of the Polar Method
  * for generating Gaussian distributed random numbers.
  *
- * Copyright 2015, 2017-2020, 2022 Vincent A. Cicirello, <https://www.cicirello.org/>.
+ * Copyright 2015, 2017-2024 Vincent A. Cicirello, <https://www.cicirello.org/>.
  *
  * This program is free software: you can
  * redistribute it and/or modify it under the terms of the GNU
@@ -26,6 +26,7 @@ package org.cicirello.math.rand;
 import java.util.Random;
 import java.util.SplittableRandom;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.function.DoubleSupplier;
 
 /**
  * This class provides methods for generating pseudorandom numbers from a Gaussian distribution
@@ -130,23 +131,7 @@ public final class PolarGaussian {
    * @return A random number from a Gaussian distribution with mean 0 and standard deviation 1.
    */
   public static double nextGaussian(Random r) {
-    Double next = nextG.get();
-    if (next != null) {
-      nextG.set(null);
-      return next;
-    } else {
-      double v1 = 0;
-      double v2 = 0;
-      double s = 0;
-      while (s >= 1 || s == 0) {
-        v1 = 2 * r.nextDouble() - 1;
-        v2 = 2 * r.nextDouble() - 1;
-        s = v1 * v1 + v2 * v2;
-      }
-      double m = StrictMath.sqrt(-2 * StrictMath.log(s) / s);
-      nextG.set(v2 * m);
-      return v1 * m;
-    }
+    return nextGaussian(r::nextDouble);
   }
 
   /**
@@ -156,19 +141,23 @@ public final class PolarGaussian {
    * @return A random number from a Gaussian distribution with mean 0 and standard deviation 1.
    */
   public static double nextGaussian(SplittableRandom r) {
+    return nextGaussian(r::nextDouble);
+  }
+
+  static double nextGaussian(DoubleSupplier r) {
     Double next = nextG.get();
     if (next != null) {
       nextG.set(null);
       return next;
     } else {
-      double v1 = 0;
-      double v2 = 0;
-      double s = 0;
-      while (s >= 1 || s == 0) {
-        v1 = 2 * r.nextDouble() - 1;
-        v2 = 2 * r.nextDouble() - 1;
+      double v1;
+      double v2;
+      double s;
+      do {
+        v1 = 2 * r.getAsDouble() - 1;
+        v2 = 2 * r.getAsDouble() - 1;
         s = v1 * v1 + v2 * v2;
-      }
+      } while (s >= 1 || s == 0);
       double m = StrictMath.sqrt(-2 * StrictMath.log(s) / s);
       nextG.set(v2 * m);
       return v1 * m;
