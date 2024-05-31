@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Removed support for importing from JitPack.
 
 ### Fixed
+* Refactored loop in PolarGaussian based on SpotBugs report.
 
 ### CI/CD
 * Integrated SpotBugs into build process.
