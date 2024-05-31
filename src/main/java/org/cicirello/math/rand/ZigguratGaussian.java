@@ -3,7 +3,7 @@
  * of the Ziggurat method for generating Gaussian distributed
  * random numbers.
  *
- * Copyright 2015, 2017-2022 Vincent A. Cicirello, <https://www.cicirello.org/>.
+ * Copyright 2015, 2017-2024 Vincent A. Cicirello, <https://www.cicirello.org/>.
  *
  * This program is free software: you can
  * redistribute it and/or modify it under the terms of the GNU
@@ -62,14 +62,25 @@ import java.util.concurrent.ThreadLocalRandom;
  * <p>This Java implementation originated as part of an effort to speed up the runtime of a parallel
  * genetic algorithm (PGA). The PGA in question evolved its control parameters (i.e., crossover and
  * mutation rates, etc) using Gaussian mutation. The only Gaussian implementation within the Java
- * API is the polar method (nextGaussian method of the {@link Random} and {@link ThreadLocalRandom}
- * classes, however the polar method is quite slow relative to other newer available alternatives,
- * such as the Ziggurat method.
+ * API (pre-Java 17) is the polar method (nextGaussian method of the {@link Random} and {@link
+ * ThreadLocalRandom} classes, however the polar method is quite slow relative to other newer
+ * available alternatives, such as the Ziggurat method.
  *
- * <p>You can find some experimental data comparing the performance of a sequential genetic
- * algorithm (GA) using this implementation of the Ziggurat method for Gaussian mutation vs using
- * the more common polar method, as well as experimental data for the same comparison but with a
- * PGA, in the following paper:
+ * <p>You can find information on when this ziggurat implementation is likely advantageous,
+ * including results of experiments in the following report:
+ *
+ * <ul>
+ *   <li>Vincent A. Cicirello. 2024. <a href="https://reports.cicirello.org/24/009/">Fast Gaussian
+ *       Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm</a>. arXiv:<a
+ *       href="https://arxiv.org/abs/2405.19493">2405.19493</a>, May 2024. doi:<a
+ *       href="https://doi.org/10.48550/arXiv.2405.19493">10.48550/arXiv.2405.19493</a>. <a
+ *       href="https://reports.cicirello.org/24/009/ALG-24-009.pdf">[PDF]</a>
+ * </ul>
+ *
+ * <p>You can find some additional experimental data comparing the performance of a sequential
+ * genetic algorithm (GA) using this implementation of the Ziggurat method for Gaussian mutation vs
+ * using the more common polar method, as well as experimental data for the same comparison but with
+ * a PGA, in the following paper:
  *
  * <ul>
  *   <li>V. A. Cicirello. <a href=https://www.cicirello.org/publications/cicirello2018flairs.html
