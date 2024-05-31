@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 * Refactored loop in PolarGaussian based on SpotBugs report.
+* Refactored PolarGaussian to eliminate redundant code between Random and SplittableRandom cases.
 
 ### CI/CD
 * Integrated SpotBugs into build process.
