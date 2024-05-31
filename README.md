@@ -54,7 +54,7 @@ number generators as well as for `SplittableRandom`. The other legacy generators
 still use the slow polar method, however. This report explores how and where our 
 ziggurat library is still relevant in Java 17.
 
-> Vincent A. Cicirello. 2024. [Fast Gaussian Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm](https://reports.cicirello.org/24/009/). arXiv:[2405.19493](https://arxiv.org/abs/2405.19493), May 2024. doi:[10.48550/arXiv.2405.19493](https://doi.org/10.48550/arXiv.2405.19493).  [[PDF]](https://reports.cicirello.org/24/009/ALG-24-009.pdf)
+> Vincent A. Cicirello. 2024. [Fast Gaussian Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm](https://reports.cicirello.org/24/009/). arXiv:[2405.19493](https://arxiv.org/abs/2405.19493), May 2024. doi:[10.48550/arXiv.2405.19493](https://doi.org/10.48550/arXiv.2405.19493). [[PDF]](https://reports.cicirello.org/24/009/ALG-24-009.pdf)
 
 You can find some additional experimental data comparing the performance of a sequential
 genetic algorithm (GA) using this implementation of the Ziggurat method for
