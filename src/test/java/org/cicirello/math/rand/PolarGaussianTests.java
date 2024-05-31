@@ -1,7 +1,7 @@
 /*
  * JUnit test cases for PolarGaussian.
  *
- * Copyright 2019-2022 Vincent A. Cicirello, <https://www.cicirello.org/>.
+ * Copyright 2019-2024 Vincent A. Cicirello, <https://www.cicirello.org/>.
  *
  * This program is free software: you can
  * redistribute it and/or modify it under the terms of the GNU
@@ -170,6 +170,41 @@ public class PolarGaussianTests {
       if (positive && negative) break;
     }
     assertTrue(positive && negative);
+  }
+
+  @Test
+  public void testLowProbEdgeCase() {
+    class ForceEdgeCase extends Random {
+      private int count;
+
+      public ForceEdgeCase(long seed) {
+        super(seed);
+        count = 0;
+      }
+
+      @Override
+      public double nextDouble() {
+        if (count < 2) {
+          count++;
+          return 0.5;
+        }
+        return super.nextDouble();
+      }
+    }
+    Random r = new ForceEdgeCase(42);
+    int[] buckets = new int[20];
+    final int N = buckets.length * EXPECTED_SAMPLES_PER_BUCKET;
+    for (int i = 0; i < N; i++) {
+      int j = whichBucket(PolarGaussian.nextGaussian(r::nextDouble));
+      buckets[j]++;
+    }
+    double chi = chiSquare(buckets);
+    if (VERBOSE_OUTPUT) {
+      System.out.printf("Random, sigma=1, chi=%5.4f\n", chi);
+    }
+    assertTrue(
+        chi <= 30.144); // 19 degrees of freedom, 95% percentage point of chi square distribution:
+    // 30.144
   }
 
   private double chiSquare(int[] buckets) {

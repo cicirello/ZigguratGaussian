@@ -2,7 +2,7 @@
 
 The code in this directory can be used to reproduce the experiments of the following paper:
 
-> Vincent A. Cicirello. 2024. [Fast Gaussian Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm](https://reports.cicirello.org/24/009/). Technical Report ALG-24-009, Cicirello.org, May 2024. [[PDF]](https://reports.cicirello.org/24/009/ALG-24-009.pdf)
+> Vincent A. Cicirello. 2024. [Fast Gaussian Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm](https://reports.cicirello.org/24/009/). arXiv:[2405.19493](https://arxiv.org/abs/2405.19493), May 2024. doi:[10.48550/arXiv.2405.19493](https://doi.org/10.48550/arXiv.2405.19493). [[PDF]](https://reports.cicirello.org/24/009/ALG-24-009.pdf)
 
 ## Building with Maven
 

@@ -10,10 +10,18 @@
         }
     ], 
     "keywords": [
-		"Ziggurat",
-		"Gaussian",
-		"Java",
-		"normal distribution",
-		"pseudorandom numbers"
-	]
+      "Ziggurat",
+      "Gaussian",
+      "Java",
+      "normal distribution",
+      "pseudorandom numbers"
+    ],
+    "related_identifiers": [
+      {
+        "scheme": "doi",
+        "identifier": "10.48550/arXiv.2405.19493",
+        "relation": "isDocumentedBy",
+        "resource_type": "publication"
+      }
+    ]
 }

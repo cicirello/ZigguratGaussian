@@ -23,7 +23,7 @@
  *
  * <h2>org.cicirello.math.rand</h2>
  *
- * <p>Copyright &copy; 2015, 2017-2022 <a href="https://www.cicirello.org/" target=_top>Vincent A.
+ * <p>Copyright &copy; 2015, 2017-2024 <a href="https://www.cicirello.org/" target=_top>Vincent A.
  * Cicirello</a>.
  *
  * <p><a href="https://central.sonatype.com/artifact/org.cicirello/ziggurat/"><img
@@ -62,6 +62,17 @@
  * polar method (nextGaussian method of the {@link java.util.Random Random} and {@link
  * java.util.concurrent.ThreadLocalRandom ThreadLocalRandom} classes, however the polar method is
  * quite slow relative to other newer available alternatives, such as the Ziggurat method.
+ *
+ * <p>You can find information on when this ziggurat implementation is likely advantageous,
+ * including results of experiments in the following report:
+ *
+ * <ul>
+ *   <li>Vincent A. Cicirello. 2024. <a href="https://reports.cicirello.org/24/009/">Fast Gaussian
+ *       Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm</a>. arXiv:<a
+ *       href="https://arxiv.org/abs/2405.19493">2405.19493</a>, May 2024. doi:<a
+ *       href="https://doi.org/10.48550/arXiv.2405.19493">10.48550/arXiv.2405.19493</a>. <a
+ *       href="https://reports.cicirello.org/24/009/ALG-24-009.pdf">[PDF]</a>
+ * </ul>
  *
  * <p>You can find some experimental data comparing the performance of a sequential genetic
  * algorithm (GA) using the implementation of the Ziggurat method for Gaussian mutation vs using the

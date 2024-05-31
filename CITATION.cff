@@ -14,12 +14,17 @@ preferred-citation:
   - family-names: "Cicirello"
     given-names: "Vincent A"
     orcid: "https://orcid.org/0000-0003-1072-8559"
-  institution: "Cicirello.org"
+  doi: "10.48550/arXiv.2405.19493"
   month: 5
   year: 2024
   title: "Fast Gaussian Distributed Pseudorandom Number Generation in Java via the Ziggurat Algorithm"
-  url: "https://reports.cicirello.org/24/009/"
   identifiers:
   - type: other
-    value: "ALG-24-009"
-    description: "Technical Report"	
+    value: "arXiv:2405.19493"
+    description: "arXiv preprint"
+  - type: doi
+    value: 10.48550/arXiv.2405.19493
+    description: "The DOI of the report"
+  - type: url
+    value: "https://reports.cicirello.org/24/009/ALG-24-009.pdf"
+    description: "A full-text pdf of the report"

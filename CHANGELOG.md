@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - 2023-10-01
+## [Unreleased] - 2024-05-31
 
 ### Added
 
@@ -16,12 +16,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Removed support for importing from JitPack.
 
 ### Fixed
+* Refactored loop in PolarGaussian based on SpotBugs report.
+* Refactored PolarGaussian to eliminate redundant code between Random and SplittableRandom cases.
 
 ### CI/CD
 * Integrated SpotBugs into build process.
 * Integrated FindSecBugs into build process.
 
 ### Other
+* Updated documentation.
 
 
 ## [1.0.5] - 2022-12-01
