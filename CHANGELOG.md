@@ -13,7 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 
 ### Removed
-* Removed support for importing from JitPack.
+
+### Fixed
+
+### CI/CD
+
+### Other
+
+
+## [1.1.0] - 2024-05-31
+
+### Added
+* Directory of code with experiments using the library.
 
 ### Fixed
 * Refactored loop in PolarGaussian based on SpotBugs report.
@@ -22,9 +33,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### CI/CD
 * Integrated SpotBugs into build process.
 * Integrated FindSecBugs into build process.
+* Removed support for importing from JitPack.
 
 ### Other
 * Updated documentation.
+* Updated Zenodo metadata.
 
 
 ## [1.0.5] - 2022-12-01
