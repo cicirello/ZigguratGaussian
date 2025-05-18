@@ -19,7 +19,7 @@ jobs:
       id: get_version
       run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_OUTPUT
 
-    - name: Set up JDK 17 for deploy to Central (NOTE: build for 11, but need 17 for fmt-maven-plugin)
+    - name: Set up JDK 17 for deploy to Central
       uses: actions/setup-java@v4
       with:
         distribution: 'adopt'
@@ -43,7 +43,7 @@ jobs:
         MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
         MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}		
 
-    - name: Set up JDK 17 for deploy to github packages (NOTE: build for 11, but need 17 for fmt-maven-plugin)
+    - name: Set up JDK 17 for deploy to github packages
       uses: actions/setup-java@v4
       with:
         distribution: 'adopt'
