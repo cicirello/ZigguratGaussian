@@ -22,11 +22,11 @@ jobs:
         ref: badges
         path: badges
 
-    - name: Set up JDK 11
+    - name: Set up JDK 17 (NOTE: builds for Java 11, but need Java 17 for fmt-maven-plugin)
       uses: actions/setup-java@v4
       with:
         distribution: 'adopt'
-        java-version: '11'
+        java-version: '17'
 
     - name: Build with Maven
       run: mvn -B package -Pcoverage
