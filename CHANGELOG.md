@@ -21,6 +21,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Other
 
 
+## [1.1.2] - 2026-07-08
+
+__Release is equivalent to prior release:__ Release is to verify revisions to CI/CD pipeline work 
+as expected. Only other changes are to test case code, with no changes to the libary itself.
+
+### Fixed
+* Refactored test cases to eliminate redundancy (no changes to the library itself).
+
+### CI/CD
+* Revised CI/CD pipeline.
+
+
 ## [1.1.1] - 2025-05-15
 
 ### Other
