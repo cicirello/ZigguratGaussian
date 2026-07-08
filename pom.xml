@@ -152,6 +152,8 @@
 						<version>0.9.0</version>       
 						<configuration>
 							<showDetails>true</showDetails>
+                            <excludeTests>true</excludeTests>
+                            <testSourceDirectory>experiment</testSourceDirectory>
 						</configuration>
 						<executions>
 							<execution>
