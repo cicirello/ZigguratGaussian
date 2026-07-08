@@ -3,7 +3,7 @@
 [<img alt="Ziggurat Gaussian - Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm" 
      src="https://raw.githubusercontent.com/cicirello/ZigguratGaussian/master/images/ziggurat-gaussian.png" width="640">](#ziggurat-gaussian)
 
-Copyright (C) 2015, 2017-2024 [Vincent A. Cicirello](https://www.cicirello.org/).
+Copyright (C) 2015, 2017-2026 [Vincent A. Cicirello](https://www.cicirello.org/).
 
 | __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central&logo=apachemaven)](https://central.sonatype.com/artifact/org.cicirello/ziggurat/) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) |
 | :--- | :--- |
@@ -76,7 +76,7 @@ additional experimental data:
 The entirety of this library has been absorbed 
 by [&rho;&mu;, a Java library of Randomization enHancements and Other Math Utilities](https://github.com/cicirello/rho-mu), which
 includes additional enhanced random number generation, among other related functionality. However, [&rho;&mu;](https://rho-mu.cicirello.org/)
-requires Java 17+, whereas this Ziggurat implementation supports Java 11+.
+requires Java 25+, whereas this Ziggurat implementation supports Java 11+.
 
 ## Versioning Scheme
 
@@ -89,7 +89,7 @@ and PATCH corresponds to backwards compatible bug fixes.
 ## Java 11+
 
 The jars of the library, distributed via Maven Central, GitHub Packages, 
-and GitHub Releases, are built with OpenJDK 17 but for a target of Java 11.   
+and GitHub Releases, are built with OpenJDK 25 but for a target of Java 11.   
 
 ## Importing from Package Repositories
 
@@ -99,14 +99,14 @@ Packages mainly as a fall-back in the unlikely scenario that Maven Central is un
 
 ### Importing from Maven Central
 
-Add this to the dependencies section of your pom.xml, replacing 
-the version number with the version that you want to use.
+Add this to the dependencies section of your pom.xml, replacing `x.y.z` with 
+the version number of the version that you want to use.
 
 ```XML
 <dependency>
   <groupId>org.cicirello</groupId>
   <artifactId>ziggurat</artifactId>
-  <version>1.0.5</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
