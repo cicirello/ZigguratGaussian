@@ -3,7 +3,7 @@
 [<img alt="Ziggurat Gaussian - Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm" 
      src="https://raw.githubusercontent.com/cicirello/ZigguratGaussian/master/images/ziggurat-gaussian.png" width="640">](#ziggurat-gaussian)
 
-Copyright (C) 2015, 2017-2024 [Vincent A. Cicirello](https://www.cicirello.org/).
+Copyright (C) 2015, 2017-2026 [Vincent A. Cicirello](https://www.cicirello.org/).
 
 | __Packages and Releases__ | [![Maven Central](https://img.shields.io/maven-central/v/org.cicirello/ziggurat.svg?label=Maven%20Central&logo=apachemaven)](https://central.sonatype.com/artifact/org.cicirello/ziggurat/) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cicirello/ZigguratGaussian?logo=GitHub)](https://github.com/cicirello/ZigguratGaussian/releases) |
 | :--- | :--- |
@@ -11,7 +11,7 @@ Copyright (C) 2015, 2017-2024 [Vincent A. Cicirello](https://www.cicirello.org/)
 | __JaCoCo Test Coverage__ | [![coverage](https://raw.githubusercontent.com/cicirello/ZigguratGaussian/badges/jacoco.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml) [![branches coverage](https://raw.githubusercontent.com/cicirello/ZigguratGaussian/badges/branches.svg)](https://github.com/cicirello/ZigguratGaussian/actions/workflows/build.yml)  |
 | __Security__ | [![Snyk security score](https://snyk-widget.herokuapp.com/badge/mvn/org.cicirello/ziggurat/badge.svg)](https://snyk.io/vuln/maven%3Aorg.cicirello%3Aziggurat) [![Snyk Known Vulnerabilities](https://snyk.io/test/github/cicirello/ZigguratGaussian/badge.svg)](https://snyk.io/test/github/cicirello/ZigguratGaussian) |
 | __DOI__ | [![DOI](https://zenodo.org/badge/201526811.svg)](https://zenodo.org/badge/latestdoi/201526811) |
-| __Other Information__ | [![GitHub](https://img.shields.io/github/license/cicirello/ZigguratGaussian)](https://github.com/cicirello/ZigguratGaussian/blob/master/LICENSE) [![style](https://img.shields.io/badge/style-Google%20Java%20Style-informational)](https://google.github.io/styleguide/javaguide.html) |
+| __Other Information__ | [![GitHub](https://img.shields.io/github/license/cicirello/ZigguratGaussian)](https://github.com/cicirello/ZigguratGaussian/blob/master/LICENSE) [![style](https://img.shields.io/badge/style-Google%20Java%20Style-informational)](https://google.github.io/styleguide/javaguide.html) ![Minimum supported Java version](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcicirello%2FZigguratGaussian%2Frefs%2Fheads%2Fmaster%2Fpom.xml&query=%2F*%5Blocal-name()%3D'project'%5D%2F*%5Blocal-name()%3D'properties'%5D%2F*%5Blocal-name()%3D'maven.compiler.release'%5D&prefix=%3E%3D&label=Java) |
 | __Support__ | [![GitHub Sponsors](https://img.shields.io/badge/sponsor-30363D?logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/cicirello) [![Liberapay](https://img.shields.io/badge/Liberapay-F6C915?logo=liberapay&logoColor=black)](https://liberapay.com/cicirello) [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?logo=ko-fi&logoColor=white)](https://ko-fi.com/cicirello) |
 
 ## Fast Gaussian distributed pseudorandom number generation in Java via the Ziggurat algorithm
@@ -76,7 +76,7 @@ additional experimental data:
 The entirety of this library has been absorbed 
 by [&rho;&mu;, a Java library of Randomization enHancements and Other Math Utilities](https://github.com/cicirello/rho-mu), which
 includes additional enhanced random number generation, among other related functionality. However, [&rho;&mu;](https://rho-mu.cicirello.org/)
-requires Java 17+, whereas this Ziggurat implementation supports Java 11+.
+requires Java 25+, whereas this Ziggurat implementation supports Java 11+.
 
 ## Versioning Scheme
 
@@ -89,7 +89,7 @@ and PATCH corresponds to backwards compatible bug fixes.
 ## Java 11+
 
 The jars of the library, distributed via Maven Central, GitHub Packages, 
-and GitHub Releases, are built with OpenJDK 17 but for a target of Java 11.   
+and GitHub Releases, are built with OpenJDK 25 but for a target of Java 11.   
 
 ## Importing from Package Repositories
 
@@ -99,14 +99,14 @@ Packages mainly as a fall-back in the unlikely scenario that Maven Central is un
 
 ### Importing from Maven Central
 
-Add this to the dependencies section of your pom.xml, replacing 
-the version number with the version that you want to use.
+Add this to the dependencies section of your pom.xml, replacing `x.y.z` with 
+the version number of the version that you want to use.
 
 ```XML
 <dependency>
   <groupId>org.cicirello</groupId>
   <artifactId>ziggurat</artifactId>
-  <version>1.0.5</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
